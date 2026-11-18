@@ -1,0 +1,92 @@
+{
+  "run": "p1_moe_math_search128_cap98k",
+  "purpose": "plane1_calibration",
+  "task": "math",
+  "dataset": "math_search128.jsonl",
+  "dataset_sha256": "17c3e26014f21f03cb4896200c4f3de1040cf7c41ef02ed56e8ca5cff95be456",
+  "server_stage": "p1_moe_srv_cap98k",
+  "served_model": "qwen_gov_v2",
+  "policy": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "max_tokens": 98304,
+    "stop_token_ids": [
+      248046,
+      248044
+    ],
+    "thinking": true,
+    "effort": null
+  },
+  "concurrency": 12,
+  "draws": 1,
+  "seed": 20261117,
+  "unique_problems": 128,
+  "requests": 128,
+  "wall_seconds": 1860.5508786300197,
+  "dataset_seconds": 1860.5394055370707,
+  "output_tokens": 1751448,
+  "output_tokens_quantiles": {
+    "count": 128,
+    "p50": 8996.5,
+    "p90": 25952.3,
+    "p95": 35738.44999999999,
+    "p99": 98304.0,
+    "max": 98304.0
+  },
+  "output_tokens_per_second": 941.3657108189117,
+  "requests_per_second": 0.06879725289293241,
+  "assigned_gpu_hours": 2.067266006152301,
+  "infrastructure_errors": 0,
+  "stop_rate": 0.9765625,
+  "truncation_rate": 0.0234375,
+  "tpot_ms": {
+    "count": 128,
+    "p50": 11.663402610238661,
+    "p90": 12.690745015200763,
+    "p95": 12.779722810218596,
+    "p99": 13.035698239967953,
+    "max": 13.188726563649823
+  },
+  "ttft_ms": {
+    "count": 128,
+    "p50": 154.41682457458228,
+    "p90": 1258.8050341932098,
+    "p95": 6402.613472705707,
+    "p99": 6403.474983070046,
+    "max": 6404.058281797916
+  },
+  "tpot_p95_ms": 12.779722810218596,
+  "ttft_p95_ms": 6402.613472705707,
+  "request_seconds": {
+    "count": 128,
+    "p50": 103.8786475295201,
+    "p90": 295.69864685828793,
+    "p95": 417.20320139410904,
+    "p99": 1107.4375593440493,
+    "max": 1201.7791044670157
+  },
+  "board_joules": 1799363.2094028061,
+  "energy": {
+    "board_joules": 1799363.2094028061,
+    "sampled_seconds": 1860.7154209308792,
+    "samples": 1626,
+    "errors": [],
+    "scope": "Participating GPU boards only, not whole-machine energy"
+  },
+  "mtp_speculative": {
+    "draft_tokens": 0.0,
+    "accepted_tokens": 0.0,
+    "acceptance_rate": null
+  },
+  "raw_generations_sha256": "40aa8073f833afd08f8f16c8010a8aaaa2224e93a4316177b6b3a9e55e5b8a38",
+  "lenient_accuracy": 0.953125,
+  "strict_accuracy": 0.953125,
+  "v1_parity_accuracy": 0.953125,
+  "natural_stop_lenient_parse_failure_rate": 0.0,
+  "verifier_errors": 0,
+  "slo_correct_goodput_per_second": 0.02042418445258931
+}

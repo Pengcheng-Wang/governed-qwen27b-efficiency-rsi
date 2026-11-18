@@ -1,0 +1,200 @@
+{
+  "status": "COMPLETE",
+  "run_name": "p1_train_aa_hermetic_b4_A2",
+  "architecture": "Qwen3_5ForConditionalGeneration",
+  "world_size": 8,
+  "micro_batch": 1,
+  "length_bucketing": false,
+  "activation_offloading": false,
+  "presentations": 1024,
+  "updates": 16,
+  "input_tokens": 340797,
+  "supervised_tokens": 254724,
+  "padded_tokens": 340797,
+  "padding_over_input_fraction": 0.0,
+  "loop_seconds": 306.0149729209952,
+  "checkpoint_save_seconds": 4.1280873119831085e-06,
+  "process_seconds": 424.0439711420331,
+  "assigned_loop_gpu_hours": 0.6800332731577671,
+  "supervised_tokens_per_second": 832.3906427472843,
+  "input_tokens_per_second": 1113.661193591284,
+  "before_nll": 0.7487699694356774,
+  "after_nll": 0.6286507885865741,
+  "peak_allocated_gib": 55.13982677459717,
+  "allocated_headroom_gib": 24.109929084777832,
+  "board_joules": 420105.4842672242,
+  "mfu": {
+    "lower": 0.04616946033271156,
+    "upper": 0.04629805884738622,
+    "peak_dense_bf16_tflops_per_a100": 312,
+    "label": "Partial algorithmic matmul-only MFU estimate, not complete hybrid-model MFU",
+    "coverage": "LM projection, MLP, logits head and full attention; no vision or unused MTP",
+    "omitted": "Gated DeltaNet recurrence, convolution, normalization, activation and optimizer arithmetic",
+    "excluded_overhead": "Padding and checkpoint recomputation excluded from FLOPs but included in time",
+    "interval_kind": "Causal/full-square attention accounting conventions, not a confidence interval",
+    "hfu": null
+  },
+  "merge_qualification": null,
+  "steps": [
+    {
+      "step": 1,
+      "seconds": 124.51461658300832,
+      "loss": 0.7693421017600451,
+      "grad_norm": 0.4131734073162079,
+      "global_group_hash": "892908f566d6b446d2c506bdb786c98f216164389ccf63d310ae2f4bdbd3f67f",
+      "input_tokens": 22622,
+      "supervised_tokens": 16907,
+      "padded_tokens": 22622
+    },
+    {
+      "step": 2,
+      "seconds": 11.256987560074776,
+      "loss": 0.6921865482122443,
+      "grad_norm": 0.3801765739917755,
+      "global_group_hash": "9ef8de3b1e6128465bd9b681f0163f19263b69609805291df84761647ccb8044",
+      "input_tokens": 21858,
+      "supervised_tokens": 16418,
+      "padded_tokens": 21858
+    },
+    {
+      "step": 3,
+      "seconds": 10.932336295954883,
+      "loss": 0.7070053221422304,
+      "grad_norm": 0.4210260808467865,
+      "global_group_hash": "abdc512aa04dccfd3376af5b68d2a8bac12f0f173bdf5d09828313752708bee6",
+      "input_tokens": 21265,
+      "supervised_tokens": 15569,
+      "padded_tokens": 21265
+    },
+    {
+      "step": 4,
+      "seconds": 28.048431436065584,
+      "loss": 0.7014216994388973,
+      "grad_norm": 0.42919448018074036,
+      "global_group_hash": "10a88b2001158d20bd329b0bab1440823f4cc08c1f35ceab9cea9ad0a155ad73",
+      "input_tokens": 21030,
+      "supervised_tokens": 15478,
+      "padded_tokens": 21030
+    },
+    {
+      "step": 5,
+      "seconds": 11.45578791690059,
+      "loss": 0.6942657362219267,
+      "grad_norm": 0.4108714759349823,
+      "global_group_hash": "9bf467b35c23426e351983a7639f0c914376f6b45824a650b4ff1dd2b107de18",
+      "input_tokens": 22112,
+      "supervised_tokens": 16458,
+      "padded_tokens": 22112
+    },
+    {
+      "step": 6,
+      "seconds": 10.797267879825085,
+      "loss": 0.7026093208129418,
+      "grad_norm": 0.43290990591049194,
+      "global_group_hash": "3c728b0a8fc76f05bc74a70d6a31a14b3ce004d076594d11001e8eba7c13b2e5",
+      "input_tokens": 19138,
+      "supervised_tokens": 14197,
+      "padded_tokens": 19138
+    },
+    {
+      "step": 7,
+      "seconds": 11.110801245784387,
+      "loss": 0.6462697162633124,
+      "grad_norm": 0.4479638934135437,
+      "global_group_hash": "c3ff95e13ba1fa15562b82b2227d1be81086ee99cb121f532ea801150978d0ce",
+      "input_tokens": 21534,
+      "supervised_tokens": 16134,
+      "padded_tokens": 21534
+    },
+    {
+      "step": 8,
+      "seconds": 10.878336367895827,
+      "loss": 0.6706494809060748,
+      "grad_norm": 0.37273460626602173,
+      "global_group_hash": "8f669db923505264976379ec597d46a2c48dc489fd5bfee4644f680278ae5961",
+      "input_tokens": 21476,
+      "supervised_tokens": 15803,
+      "padded_tokens": 21476
+    },
+    {
+      "step": 9,
+      "seconds": 10.692043387098238,
+      "loss": 0.6574550649483286,
+      "grad_norm": 0.38829296827316284,
+      "global_group_hash": "43d734926cf8466327e80a6c7f178b4c73df12da100dc89cae62fd62c9df3b17",
+      "input_tokens": 20357,
+      "supervised_tokens": 15178,
+      "padded_tokens": 20357
+    },
+    {
+      "step": 10,
+      "seconds": 10.836792497197166,
+      "loss": 0.6687554925752521,
+      "grad_norm": 0.41792240738868713,
+      "global_group_hash": "723c01b8d9818b7fd6604ecbd48358be1379680bf15ad00f3358e613ff955ed0",
+      "input_tokens": 19605,
+      "supervised_tokens": 14415,
+      "padded_tokens": 19605
+    },
+    {
+      "step": 11,
+      "seconds": 10.810876886826009,
+      "loss": 0.7187318627290605,
+      "grad_norm": 0.38319122791290283,
+      "global_group_hash": "80c8d74e430bf345ae0c1fd00d30470bce3cb69a6015981012e053f26d3aa4c1",
+      "input_tokens": 21389,
+      "supervised_tokens": 15957,
+      "padded_tokens": 21389
+    },
+    {
+      "step": 12,
+      "seconds": 10.996465557953343,
+      "loss": 0.5798911474267384,
+      "grad_norm": 0.3069596290588379,
+      "global_group_hash": "cf79fc005b7f35498b31368a7ebf9c6ca6d6dbce1e24c6b96cf60a86a475bd4e",
+      "input_tokens": 23654,
+      "supervised_tokens": 18540,
+      "padded_tokens": 23654
+    },
+    {
+      "step": 13,
+      "seconds": 10.920275608077645,
+      "loss": 0.638549640951092,
+      "grad_norm": 0.31244996190071106,
+      "global_group_hash": "4d11f24a297be3b02cf864a05d4cb40f0ed72ca1788558566266a0599fe4fe25",
+      "input_tokens": 23399,
+      "supervised_tokens": 17574,
+      "padded_tokens": 23399
+    },
+    {
+      "step": 14,
+      "seconds": 10.743876554071903,
+      "loss": 0.6260950924684778,
+      "grad_norm": 0.376419335603714,
+      "global_group_hash": "d4c6b20e1e7cb43be1c6161a85e985c996c0323b3786dd09b3d5af04247a9d60",
+      "input_tokens": 19657,
+      "supervised_tokens": 14565,
+      "padded_tokens": 19657
+    },
+    {
+      "step": 15,
+      "seconds": 10.742373998044059,
+      "loss": 0.6583514759646301,
+      "grad_norm": 0.37270215153694153,
+      "global_group_hash": "a958417f8fdb49ed81651a4619e329226dd0fa37eb8836bfa25d5a988a969dc5",
+      "input_tokens": 19228,
+      "supervised_tokens": 14137,
+      "padded_tokens": 19228
+    },
+    {
+      "step": 16,
+      "seconds": 10.791050352854654,
+      "loss": 0.6247287901692162,
+      "grad_norm": 0.25022971630096436,
+      "global_group_hash": "ea27a3a0d1565a1c1f69bf3b018feb2b854e3cb5c6d3358273924866cb8ef494",
+      "input_tokens": 22473,
+      "supervised_tokens": 17394,
+      "padded_tokens": 22473
+    }
+  ]
+}

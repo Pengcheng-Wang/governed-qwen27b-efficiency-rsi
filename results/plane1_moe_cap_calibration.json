@@ -1,0 +1,32 @@
+{
+  "status": "MOE_CAP_CALIBRATED",
+  "cap_32768": {
+    "lenient_accuracy": 0.9140625,
+    "strict_accuracy": 0.9140625,
+    "stop_rate": 0.9296875,
+    "truncation_rate": 0.0703125,
+    "output_tokens_quantiles": {
+      "count": 128,
+      "p50": 8710.5,
+      "p90": 26070.699999999997,
+      "p95": 32768.0,
+      "p99": 32768.0,
+      "max": 32768.0
+    }
+  },
+  "cap_49152": {
+    "lenient_accuracy": 0.9453125,
+    "strict_accuracy": 0.9453125,
+    "stop_rate": 0.96875,
+    "truncation_rate": 0.03125,
+    "output_tokens_quantiles": {
+      "count": 128,
+      "p50": 7204.5,
+      "p90": 26236.8,
+      "p95": 30290.799999999977,
+      "p99": 49152.0,
+      "max": 49152.0
+    }
+  },
+  "selected_outer_cap": 49152
+}

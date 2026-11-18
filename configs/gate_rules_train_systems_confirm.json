@@ -1,0 +1,52 @@
+{
+  "loop_id": "loop_train_systems_confirm_v2",
+  "primary_metric": "loop_seconds",
+  "primary_statistic": "mean",
+  "direction": "minimize",
+  "decision_stage": "confirm",
+  "alpha_one_sided": 0.025,
+  "multiplicity_k": 1,
+  "min_improvement": 25.0,
+  "aa_noise_se": 1.1703711188285073,
+  "require_env_fingerprint_match": true,
+  "expected_item_ids": [
+    "abab_block_00",
+    "abab_block_01",
+    "abab_block_02",
+    "abab_block_03",
+    "abab_block_04",
+    "abab_block_05",
+    "abab_block_06",
+    "abab_block_07",
+    "abab_block_08",
+    "abab_block_09"
+  ],
+  "expected_cluster_map": {
+    "abab_block_00": "abab_block_00",
+    "abab_block_01": "abab_block_01",
+    "abab_block_02": "abab_block_02",
+    "abab_block_03": "abab_block_03",
+    "abab_block_04": "abab_block_04",
+    "abab_block_05": "abab_block_05",
+    "abab_block_06": "abab_block_06",
+    "abab_block_07": "abab_block_07",
+    "abab_block_08": "abab_block_08",
+    "abab_block_09": "abab_block_09"
+  },
+  "min_independent_clusters": 10,
+  "metric_directions": {
+    "loop_seconds": "minimize",
+    "after_nll": "minimize",
+    "peak_allocated_gib": "minimize"
+  },
+  "max_ratio_vs_baseline": {
+    "after_nll": 1.005
+  },
+  "hard_ceilings": {
+    "peak_allocated_gib": 76.0,
+    "infrastructure_error_count": 0.0
+  },
+  "max_cumulative_primary_regression": 5.0,
+  "max_dev_looks": 20,
+  "max_consecutive_rollbacks": 5
+}

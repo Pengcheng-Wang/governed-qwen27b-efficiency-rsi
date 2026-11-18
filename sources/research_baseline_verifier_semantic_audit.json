@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "status": "REFERENCE_GROUNDED_SAMPLE_REVIEW_COMPLETE_REMOTE_RUNTIME_PARITY_PENDING",
+  "experiment_admission_granted": false,
+  "superseded_unacknowledged_manifest_root": "b31ab221dc22a1ab8ce08992f403674c78ae02a93f80c2945f78d19dec7e901d",
+  "selection": {
+    "archive_sha256": "a1ce1c5a3ea7019c72b1596b62b921d0b43b9907cbaceff2f1e5b8efd3525bfa",
+    "archive_records_structurally_authenticated": 940,
+    "answers_regraded": 40,
+    "unique_problems": 40,
+    "historical_passes": 20,
+    "historical_natural_stop_failures": 20,
+    "method": "Fixed, distinct-ID stratification from four archived baseline runs; MATH500 10+10, development200 5+5, AIME24 3+3, AIME25 2+2. No new confirmation or protected labels opened.",
+    "representative_accuracy_estimate": false
+  },
+  "independent_parent_receipts": {
+    "pre_repair": {
+      "file": "governed_baseline_verifier_replay_windows_external_snapshot.json",
+      "sha256": "411d35b4bc98f0617438f13dee33a973c5657053a4a8b8316c032759c94e9651",
+      "verifier_source_sha256": "d6b07c4d2401877ad72c0d8207009d7efebe514c0ad37ae6bc9d39d80c89d794"
+    },
+    "post_repair": {
+      "file": "governed_baseline_verifier_replay_repaired_snapshot.json",
+      "sha256": "a548bbaaf527301c200324420052af5aaf3172bfaa3c0739a38280567c89f5aa",
+      "oracle_source_sha256": "6b4b883171d236e4db5ce7a7c0b1b3f63b640b4f4b0b88455ea75a93a0765c9c",
+      "verifier_source_sha256": "1961b86ea2b27c81e4196d849a036f435c5d9334e1b44cb5ff65aabb6d8aa9b1"
+    },
+    "post_finite_set_type_repair": {
+      "file": "governed_baseline_verifier_replay_setsafe_snapshot.json",
+      "sha256": "3de60b3e17cc67a0ad4da530da7e28da0981b0435664f871aa049b09df4e2d16",
+      "oracle_source_sha256": "6b4b883171d236e4db5ce7a7c0b1b3f63b640b4f4b0b88455ea75a93a0765c9c",
+      "verifier_source_sha256": "a3aa8c7127f830c0d57257075c29422f942e3453e0608ea72225f64a89880ce0"
+    }
+  },
+  "repair": {
+    "public_problem_context": "Passed from the original prompt, never inferred from candidate claims; used for percent-value and grade-label interpretation.",
+    "notation": "Equivalent interval/relation comparison; Unicode degree to TeX degree; numeric TeX matrix row spacing; whole numeric-word references; explicitly spaced integer reference lists retain finite-set semantics and cardinality, without imposing an incorrect member order or becoming an interval.",
+    "legacy_mode": "v1_correct retains the previous symbolic comparison path; all 40 v1 grades were preserved.",
+    "strict_final_channel_and_sft_format_rules_changed": false,
+    "exact_integer_scorer_changed": false,
+    "invalid_gold_silently_relabelled": false
+  },
+  "replay_findings": {
+    "historical_acceptances": 20,
+    "pre_repair_acceptances": 21,
+    "post_repair_acceptances": 30,
+    "previously_accepted_cases_lost": 0,
+    "newly_repaired_semantic_false_negatives": 9,
+    "historical_false_negatives_already_supported_before_repair": 1,
+    "published_gold_contradictions": 1,
+    "principal_range_convention_ambiguities": 1,
+    "reference_incorrect_completions_retained_as_incorrect": 7,
+    "missing_final_channel_completions_retained_as_unusable": 1,
+    "verifier_execution_errors": 0
+  },
+  "review_basis": "Reference-grounded agent inspection of archived questions, published answer/derivation fields, and model final channels; selected arithmetic, vector identities, and the contradicted gold were independently checked exactly. This is not a claim that every published proof or all 940 answers were independently re-solved.",
+  "historical_failure_dispositions": [
+    {
+      "id": "math500:103",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "3 < lambda <= 4 is exactly the reference interval (3,4]; changing an endpoint remains rejected."
+    },
+    {
+      "id": "math500:240",
+      "disposition": "REFERENCE_INCORRECT_RETAINED",
+      "basis": "Model 154 differs from the archived angle derivation and reference 116."
+    },
+    {
+      "id": "math500:284",
+      "disposition": "QUARANTINE_PRINCIPAL_RANGE_CONVENTION_AMBIGUITY",
+      "basis": "The reference uses arccot(1/x)=arctan(x) for all nonzero x; the model explicitly uses arccot range (0,pi), which adds the negative roots. Under that latter convention the four reported roots satisfy the equation. Do not call this an unconditional model error or silently adopt either convention."
+    },
+    {
+      "id": "math500:340",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "55 with a Unicode degree sign equals the reference TeX degree notation."
+    },
+    {
+      "id": "math500:379",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "The public question asks which grade; 12th grade denotes reference 12. The ratio 11.6/8.6 is closest to 1.35."
+    },
+    {
+      "id": "math500:408",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "Removing only the matrix row-spacing directive preserves (1/5,-18/5). Exact reflection [[4/5,3/5],[3/5,-4/5]] applied to (-2,3) verifies both entries."
+    },
+    {
+      "id": "math500:431",
+      "disposition": "REFERENCE_INCORRECT_RETAINED",
+      "basis": "Writing t=arcsin(x) gives 2(t-pi/4)^2+pi^2/8 on [-pi/2,pi/2]. The maximum is 5*pi^2/4, not the model's pi^2/4."
+    },
+    {
+      "id": "math500:67",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "The question asks percent decrease; area ratio 0.6*1.5=0.9 means 10 percent, not 0.1 percent."
+    },
+    {
+      "id": "math500:94",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "The question asks an angle in degrees; the model's Unicode 80-degree notation equals reference 80."
+    },
+    {
+      "id": "math500:99",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "The row-spacing-only variant represents (-1/3,2/3,5/3). Exact dot with (1,1,1) is 2 and cross is (1,-2,1), as required."
+    },
+    {
+      "id": "math_train:1374",
+      "disposition": "HISTORICAL_FALSE_NEGATIVE_ALREADY_SUPPORTED",
+      "basis": "Correct fraction 4/5 is 80 percent; current pre-repair and post-repair graders both accept. The cause of the original archived rejection is not established."
+    },
+    {
+      "id": "math_train:2394",
+      "disposition": "REFERENCE_INCORRECT_RETAINED",
+      "basis": "Under the stated mutual handshake restriction, no pair can each shake only a shorter partner. Reference zero is retained, not model 28."
+    },
+    {
+      "id": "math_train:3679",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "For y=fourth_root(x), y(7-y)=12 gives y=3 or 4 and x=81 or 256. The two-member reference list must not be reinterpreted as the scalar 81256."
+    },
+    {
+      "id": "math_train:6627",
+      "disposition": "REPAIRED_SEMANTIC_FALSE_NEGATIVE",
+      "basis": "Positive common divisors of 40 and 72 are 1,2,4,8: numeral 4 equals the whole-word reference four."
+    },
+    {
+      "id": "math_train:7122",
+      "disposition": "QUARANTINE_CONTRADICTORY_PUBLISHED_GOLD",
+      "basis": "The stated triple product implies sin(alpha)*cos(alpha)=1/4, hence smallest alpha=15 degrees, not published 30. Exact feasible unit vectors m=(1,0,0), n=(cos(alpha),sin(alpha),0), p=(sin(alpha),0,cos(alpha)) give 1/4 at 15 degrees and sqrt(3)/4 at 30. The archived derivation itself makes the final half-angle error."
+    },
+    {
+      "id": "aime24:16",
+      "disposition": "REFERENCE_INCORRECT_RETAINED",
+      "basis": "Reference 468 is retained, not model 324; Euler's relation gives AI^2=156 and the incenter/circumradius identities give AB*AC=468."
+    },
+    {
+      "id": "aime24:17",
+      "disposition": "REFERENCE_INCORRECT_RETAINED",
+      "basis": "With a+b+c=300, shifting by 100 reduces the condition to (a-100)(b-100)(c-100)=0. Inclusion-exclusion gives 3*201-3+1=601, also checked by exhaustive exact enumeration."
+    },
+    {
+      "id": "aime24:19",
+      "disposition": "REFERENCE_INCORRECT_RETAINED",
+      "basis": "The roots-of-unity product factors using 1+i and 1-i: (-65-64i)(-65+64i)=8321, remainder 321, not model 625."
+    },
+    {
+      "id": "aime25:12",
+      "disposition": "REFERENCE_INCORRECT_RETAINED",
+      "basis": "Using the reference crossing probability 17/36 and mean 4/3 diameter crossings per chord gives 4+25*(1+4/3)+300*17/36=204, not model 637/3."
+    },
+    {
+      "id": "aime25:13",
+      "disposition": "UNUSABLE_FINAL_CHANNEL_RETAINED",
+      "basis": "Archived finish metadata says stop, but the thinking channel is unclosed and no final answer is extracted. Do not mistake this for a semantic false negative; raw SSE finish provenance was not independently recovered."
+    }
+  ],
+  "historical_passes_preserved": [
+    "math500:0", "math500:1", "math500:10", "math500:100", "math500:101",
+    "math500:102", "math500:104", "math500:105", "math500:106", "math500:107",
+    "math_train:1042", "math_train:1056", "math_train:1070", "math_train:1125",
+    "math_train:1141", "aime24:0", "aime24:1", "aime24:10", "aime25:0", "aime25:1"
+  ],
+  "quarantine_scope": {
+    "known_bad_and_ambiguous_cases_already_in_v1_exposed_panels": true,
+    "current_six_panel_historical_quarantine_receipt_sha256": "2a6abeb1257b8485542cd5f175ca7e5e1ca351281681d27c905fde382c6b17b4",
+    "require_exact_panel_hash_match_before_reusing_receipt": true,
+    "never_relabel_gold_in_the_parser": true
+  },
+  "validation": {
+    "stage": "Initial notation repair; see finite_set_type_safety_followup for the latest source and controls.",
+    "red_assertion_failures_before_production_change": 14,
+    "focused_unittest_methods_passed": 4,
+    "full_repository_unittest_methods_passed": 11,
+    "red_log_sha256": "d261c33ecb87d81bece74f767a0e4e1bb32732cb22bf724bbdb32c5d7971c9c9",
+    "green_log_sha256": "2b3036c4ef91a6567375312e109224ca69a8335fdf0a3fa4ccf844d6abf2b79c",
+    "repository_suite_log_sha256": "822c71c673c977588d5646478e151a5b5408b8ae5930175d844b210e64f57147",
+    "negative_controls": "Wrong interval endpoint, degree value, matrix sign, number-word value, list member/cardinality, coordinate order, percentage/proportion, and grade-context/value mismatches.",
+    "local_runtime": {
+      "platform": "Windows",
+      "python": "3.10",
+      "math_verify": "0.8.0",
+      "sympy": "1.14.0",
+      "dependency_location": "Parent session-only target, not a global/user or study installation",
+      "documented_dependency_timeout_adaptation": "math_verify.parse parsing_timeout=None and verify timeout_seconds=None only in the local audit/test driver",
+      "external_process_deadline_seconds_replay_and_focused_controls": 120,
+      "external_process_deadline_seconds_repository_suite": 180,
+      "production_timeout_code_modified": false
+    }
+  },
+  "finite_set_type_safety_followup": {
+    "cause": "The initial repair rewrote a finite solution list as parenthesized notation, which Math-Verify parses as an open interval. It rejected valid reversed solution lists. The library also deliberately aliases open intervals to coordinate pairs, so a separate type guard is needed for finite-set references.",
+    "repair": "Normalize only comma spacing of a bare numeric candidate list when the reference is an explicitly spaced list. Keep the reference's finite-set parse, reject interval candidates for finite-set references, and do not enable set-relation aliases for finite-set references. The legacy comparison branch is unchanged.",
+    "verifier_source_sha256": "a3aa8c7127f830c0d57257075c29422f942e3453e0608ea72225f64a89880ce0",
+    "regression_test_file": "tests/test_verifier_semantic_sets.py",
+    "regression_test_sha256": "91b1b0a0db22d9c30d3fc837f4e12b364f28af6e12677d5d879238c159a8af73",
+    "first_red": {
+      "assertion_failures": 2,
+      "execution_errors": 0,
+      "source_sha256": "055bbed4f6d64e8440022df43ed099683655c95fcccb2d82c536b051b7ea317f",
+      "log_sha256": "bdf1c1b0cc5cd437b122f37a678e09505c78dc0d85f1cbc3b869f66f4ebc7ee5"
+    },
+    "second_red": {
+      "assertion_failures": 2,
+      "execution_errors": 0,
+      "source_sha256": "138426ccc7f8c296131cc17c3ab1ac7117053b38fa97c099e2adc9c77b9a30c2",
+      "log_sha256": "e6f4c008c78eae62c20143b129b7f9597735da8149da2757d540c6e1333ebd7d"
+    },
+    "final_green": {
+      "repository_unittest_methods_passed": 15,
+      "assertion_failures": 0,
+      "execution_errors": 0,
+      "sources_stable_during_run": true,
+      "log_sha256": "ca321cbdd6a3ec06a8ebb9b027d30b921b16dc5576eed693ed514abb579bec68",
+      "scorer_source_sha256": "f2048ed0a3541f9e9fbbef36cd408629450ce30ae8eeab3abec2a79e847f868c",
+      "guard_test_source_sha256": "267c027851c1088fd5261a13627d6517a1dab20263aa63bfc678d47d5cfcf8ab"
+    },
+    "preserved": "All 40 complete historical replay grade objects are unchanged: 30 semantic acceptances, all legacy grades preserved, zero verifier errors. Grouped integer notation still works against an integer reference; intervals, inequalities, partial sets, extra members, and concatenated scalars do not substitute for the two-member solution set.",
+    "runtime_scope": "Same documented Windows-only audit adaptation and external deadlines as above; Linux default-timeout parity for this exact source remains pending."
+  },
+  "remaining_requirements": [
+    "Record remote package versions; run Linux default-timeout controls and the historical replay without the Windows adaptation.",
+    "Rescore existing exposed Plane-1 raw generations with public prompt context, preserving old raw bytes and scoring provenance; recompute Search discordance/planning if changed.",
+    "AIME cases here exercise generic symbolic grading as archival numeric controls, not a new qualification of the unchanged exact-integer production route.",
+    "Regenerate and independently acknowledge the complete protected manifest before any Plane-2 trial; this receipt is not admission.",
+    "No genuine Astra/Claude frontier review was obtained while the native desktop was locked."
+  ]
+}

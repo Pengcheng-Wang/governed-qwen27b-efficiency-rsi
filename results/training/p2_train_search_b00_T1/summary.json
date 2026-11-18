@@ -1,0 +1,200 @@
+{
+  "status": "COMPLETE",
+  "run_name": "p2_train_search_b00_T1",
+  "architecture": "Qwen3_5ForConditionalGeneration",
+  "world_size": 8,
+  "micro_batch": 4,
+  "length_bucketing": false,
+  "activation_offloading": false,
+  "presentations": 1024,
+  "updates": 16,
+  "input_tokens": 340797,
+  "supervised_tokens": 254724,
+  "padded_tokens": 585964,
+  "padding_over_input_fraction": 0.7193930697746752,
+  "loop_seconds": 316.18354131281376,
+  "checkpoint_save_seconds": 8.9260283857584e-06,
+  "process_seconds": 435.3261513169855,
+  "assigned_loop_gpu_hours": 0.7026300918062528,
+  "supervised_tokens_per_second": 805.620681400335,
+  "input_tokens_per_second": 1077.8454772977418,
+  "before_nll": 0.7490010935997227,
+  "after_nll": 0.6288100704926914,
+  "peak_allocated_gib": 60.4217004776001,
+  "allocated_headroom_gib": 18.828055381774902,
+  "board_joules": 459873.79795816616,
+  "mfu": {
+    "lower": 0.04468463505351698,
+    "upper": 0.044809097796967984,
+    "peak_dense_bf16_tflops_per_a100": 312,
+    "label": "Partial algorithmic matmul-only MFU estimate, not complete hybrid-model MFU",
+    "coverage": "LM projection, MLP, logits head and full attention; no vision or unused MTP",
+    "omitted": "Gated DeltaNet recurrence, convolution, normalization, activation and optimizer arithmetic",
+    "excluded_overhead": "Padding and checkpoint recomputation excluded from FLOPs but included in time",
+    "interval_kind": "Causal/full-square attention accounting conventions, not a confidence interval",
+    "hfu": null
+  },
+  "merge_qualification": null,
+  "steps": [
+    {
+      "step": 1,
+      "seconds": 147.05343611887656,
+      "loss": 0.7695295843697598,
+      "grad_norm": 0.41260024905204773,
+      "global_group_hash": "892908f566d6b446d2c506bdb786c98f216164389ccf63d310ae2f4bdbd3f67f",
+      "input_tokens": 22622,
+      "supervised_tokens": 16907,
+      "padded_tokens": 37968
+    },
+    {
+      "step": 2,
+      "seconds": 6.5232400870881975,
+      "loss": 0.6916271128728831,
+      "grad_norm": 0.3750799000263214,
+      "global_group_hash": "9ef8de3b1e6128465bd9b681f0163f19263b69609805291df84761647ccb8044",
+      "input_tokens": 21858,
+      "supervised_tokens": 16418,
+      "padded_tokens": 38512
+    },
+    {
+      "step": 3,
+      "seconds": 7.095244276104495,
+      "loss": 0.7070126805842838,
+      "grad_norm": 0.41799038648605347,
+      "global_group_hash": "abdc512aa04dccfd3376af5b68d2a8bac12f0f173bdf5d09828313752708bee6",
+      "input_tokens": 21265,
+      "supervised_tokens": 15569,
+      "padded_tokens": 35520
+    },
+    {
+      "step": 4,
+      "seconds": 38.11861170385964,
+      "loss": 0.7011679301375581,
+      "grad_norm": 0.4274023771286011,
+      "global_group_hash": "10a88b2001158d20bd329b0bab1440823f4cc08c1f35ceab9cea9ad0a155ad73",
+      "input_tokens": 21030,
+      "supervised_tokens": 15478,
+      "padded_tokens": 37348
+    },
+    {
+      "step": 5,
+      "seconds": 38.07365347095765,
+      "loss": 0.6943496109913007,
+      "grad_norm": 0.40493518114089966,
+      "global_group_hash": "9bf467b35c23426e351983a7639f0c914376f6b45824a650b4ff1dd2b107de18",
+      "input_tokens": 22112,
+      "supervised_tokens": 16458,
+      "padded_tokens": 36948
+    },
+    {
+      "step": 6,
+      "seconds": 7.383215587120503,
+      "loss": 0.7031884767005433,
+      "grad_norm": 0.429800420999527,
+      "global_group_hash": "3c728b0a8fc76f05bc74a70d6a31a14b3ce004d076594d11001e8eba7c13b2e5",
+      "input_tokens": 19138,
+      "supervised_tokens": 14197,
+      "padded_tokens": 34600
+    },
+    {
+      "step": 7,
+      "seconds": 9.089992254972458,
+      "loss": 0.6471899226317105,
+      "grad_norm": 0.39953193068504333,
+      "global_group_hash": "c3ff95e13ba1fa15562b82b2227d1be81086ee99cb121f532ea801150978d0ce",
+      "input_tokens": 21534,
+      "supervised_tokens": 16134,
+      "padded_tokens": 38420
+    },
+    {
+      "step": 8,
+      "seconds": 6.475493824807927,
+      "loss": 0.6708718501717382,
+      "grad_norm": 0.36810487508773804,
+      "global_group_hash": "8f669db923505264976379ec597d46a2c48dc489fd5bfee4644f680278ae5961",
+      "input_tokens": 21476,
+      "supervised_tokens": 15803,
+      "padded_tokens": 40040
+    },
+    {
+      "step": 9,
+      "seconds": 6.6415706218685955,
+      "loss": 0.6577209880471716,
+      "grad_norm": 0.3739462196826935,
+      "global_group_hash": "43d734926cf8466327e80a6c7f178b4c73df12da100dc89cae62fd62c9df3b17",
+      "input_tokens": 20357,
+      "supervised_tokens": 15178,
+      "padded_tokens": 31428
+    },
+    {
+      "step": 10,
+      "seconds": 6.88636701204814,
+      "loss": 0.6693116138016975,
+      "grad_norm": 0.3942670524120331,
+      "global_group_hash": "723c01b8d9818b7fd6604ecbd48358be1379680bf15ad00f3358e613ff955ed0",
+      "input_tokens": 19605,
+      "supervised_tokens": 14415,
+      "padded_tokens": 33240
+    },
+    {
+      "step": 11,
+      "seconds": 6.537284174002707,
+      "loss": 0.7192822947660216,
+      "grad_norm": 0.3818347752094269,
+      "global_group_hash": "80c8d74e430bf345ae0c1fd00d30470bce3cb69a6015981012e053f26d3aa4c1",
+      "input_tokens": 21389,
+      "supervised_tokens": 15957,
+      "padded_tokens": 35644
+    },
+    {
+      "step": 12,
+      "seconds": 8.011162026086822,
+      "loss": 0.5807798293512616,
+      "grad_norm": 0.311010479927063,
+      "global_group_hash": "cf79fc005b7f35498b31368a7ebf9c6ca6d6dbce1e24c6b96cf60a86a475bd4e",
+      "input_tokens": 23654,
+      "supervised_tokens": 18540,
+      "padded_tokens": 41488
+    },
+    {
+      "step": 13,
+      "seconds": 7.6954500859137625,
+      "loss": 0.6387276847021048,
+      "grad_norm": 0.31321367621421814,
+      "global_group_hash": "4d11f24a297be3b02cf864a05d4cb40f0ed72ca1788558566266a0599fe4fe25",
+      "input_tokens": 23399,
+      "supervised_tokens": 17574,
+      "padded_tokens": 40572
+    },
+    {
+      "step": 14,
+      "seconds": 6.319687497103587,
+      "loss": 0.6261633345710834,
+      "grad_norm": 0.37579721212387085,
+      "global_group_hash": "d4c6b20e1e7cb43be1c6161a85e985c996c0323b3786dd09b3d5af04247a9d60",
+      "input_tokens": 19657,
+      "supervised_tokens": 14565,
+      "padded_tokens": 34996
+    },
+    {
+      "step": 15,
+      "seconds": 5.480436945101246,
+      "loss": 0.6585781902987624,
+      "grad_norm": 0.3734149932861328,
+      "global_group_hash": "a958417f8fdb49ed81651a4619e329226dd0fa37eb8836bfa25d5a988a969dc5",
+      "input_tokens": 19228,
+      "supervised_tokens": 14137,
+      "padded_tokens": 31344
+    },
+    {
+      "step": 16,
+      "seconds": 8.328961000079289,
+      "loss": 0.6251231011175021,
+      "grad_norm": 0.2595146894454956,
+      "global_group_hash": "ea27a3a0d1565a1c1f69bf3b018feb2b854e3cb5c6d3358273924866cb8ef494",
+      "input_tokens": 22473,
+      "supervised_tokens": 17394,
+      "padded_tokens": 37896
+    }
+  ]
+}

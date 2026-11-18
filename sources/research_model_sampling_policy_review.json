@@ -1,0 +1,55 @@
+{
+  "scope": "Pinned primary-source sampling guidance; no GPU measurements or admission decision.",
+  "dense": {
+    "model": "Qwen/Qwen3.8-27B",
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/raw/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/README.md",
+    "archived_source": "research_qwen38_dense_readme_1d4bf0f2.txt",
+    "source_sha256": "57e4bdb258ee1a7d2635c5174ebd4e56abe392505cdb5f8bbb356b0dc4293641",
+    "supporting_lines": [251, 252, 500, 502, 505],
+    "official_thinking_profile": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "repetition_penalty": 1.0
+    },
+    "study_config": "configs/model.json",
+    "observed_study_sampling_matches_official_thinking_profile": true,
+    "disposition": "No sampling correction indicated for the dense serving experiment."
+  },
+  "moe": {
+    "model": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/raw/59d61f3ce65a6d9863b86d2e96597125219dc754/README.md",
+    "archived_source": "research_qwen35_moe_readme_59d61f3.txt",
+    "source_sha256": "71c3bbc2eadadd5980bbdbb15df958c27d42ede24821015602a021109aacf492",
+    "supporting_lines": [1019, 1020, 1021, 1322, 1323, 1324, 1325, 1330, 1332],
+    "official_general_thinking_profile": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 1.5,
+      "repetition_penalty": 1.0
+    },
+    "study_config": "configs/moe_model.json",
+    "observed_study_presence_penalty": 0.0,
+    "observed_study_temperature": 1.0,
+    "observed_study_sampling_matches_official_general_thinking_profile": false,
+    "observed_study_sampling_matches_official_precise_coding_profile": false,
+    "precise_coding_profile_difference": "That profile uses temperature=0.6 with presence_penalty=0.0; the current study uses temperature=1.0.",
+    "primary_source_caveat": "The card permits presence_penalty adjustments in [0,2] to reduce endless repetition, but warns of language mixing and possible quality loss. A recommendation is not proof of an improvement on this study.",
+    "proposed_bounded_diagnostic": {
+      "stage": "Unselected Plane-1 harness calibration on existing Search prompts only.",
+      "change": "Compare the current MoE profile against the complete official general-thinking profile; here the only differing sampling field is presence_penalty=1.5.",
+      "control": "Use the same problem IDs, seeds, token cap, model revision, server settings and concurrency; retain both raw runs and every discarded token in accounting.",
+      "measure": "All-rollout quantiles and right-censoring, actual stop/length rates, strict and semantic quality, wall time and participant GPU-time.",
+      "decision": "If attempted, independently apply the existing cap-headroom and verifier/hygiene rules. Do not waive these rules or equate reduced length with retained quality.",
+      "not_proven": "Neither the observed MoE long tail nor v1 fine-tuning outcomes are causally explained by this profile mismatch without the controlled comparison."
+    },
+    "dense_priority": "Do not delay or silently alter the independently registered dense serving path for this optional MoE diagnostic."
+  },
+  "admission_granted": false
+}

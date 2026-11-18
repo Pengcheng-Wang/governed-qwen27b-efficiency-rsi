@@ -1,0 +1,47 @@
+{
+  "repo_id": "Qwen/Qwen3.5-35B-A3B",
+  "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+  "architecture": "Qwen3_5MoeForConditionalGeneration",
+  "expected_checkpoint_bytes": 71903655008,
+  "expected_mtp_tensor_count": 785,
+  "model_directory": "models/moe35_base",
+  "license": "Apache-2.0",
+  "total_checkpoint_parameters": 35951822704,
+  "official_language_model_parameters": "35B total / 3B activated",
+  "eos_token_ids": [248046, 248044],
+  "pad_token_id": 248044,
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0
+  },
+  "reasoning_effort_supported": false,
+  "native_context": 262144,
+  "backbone": {
+    "layers": 40,
+    "gdn_layers": 30,
+    "full_attention_layers": 10,
+    "hidden_size": 2048,
+    "query_heads": 16,
+    "kv_heads": 2,
+    "head_dim": 256,
+    "gdn_qk_heads": 16,
+    "gdn_value_heads": 32,
+    "gdn_head_dim": 128,
+    "experts": 256,
+    "top_k_experts": 8,
+    "expert_intermediate": 512,
+    "shared_experts": 1
+  },
+  "adapter": {
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0,
+    "scope": "Attention/GDN Linear modules only; routed/shared experts, router, gates, norms, convolution, embeddings, head, vision and MTP remain frozen.",
+    "expected_modules": 190,
+    "expected_trainable_parameters": 8125440
+  }
+}

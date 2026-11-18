@@ -1,0 +1,36 @@
+{
+  "candidate_id": "T1_ddp8_micro4_nobucket",
+  "env_fingerprint": "node1_8xa100_sxm4_80gb_ddp8_torch213_cu129_sft1024_search3_hermetic",
+  "items": [
+    {
+      "cluster_id": "abab_block_00",
+      "id": "abab_block_00",
+      "value": 316.18354131281376
+    },
+    {
+      "cluster_id": "abab_block_01",
+      "id": "abab_block_01",
+      "value": 317.7886589758564
+    },
+    {
+      "cluster_id": "abab_block_02",
+      "id": "abab_block_02",
+      "value": 315.7819176129997
+    }
+  ],
+  "metrics": {
+    "after_nll": 0.6294706720143848,
+    "assigned_gpu_seconds": 2532.677647737786,
+    "infrastructure_error_count": 0.0,
+    "loop_seconds": 316.5847059672233,
+    "mean_after_nll": 0.6291947025830393,
+    "mean_assigned_gpu_hours": 0.7035215688160518,
+    "mean_board_joules": 460589.39566970174,
+    "mean_loop_seconds": 316.5847059672233,
+    "median_loop_seconds": 316.18354131281376,
+    "paired_blocks": 3.0,
+    "peak_allocated_gib": 60.4217004776001
+  },
+  "protocol_id": "loop_train_systems_search_v2",
+  "scorer_sha256": "f2048ed0a3541f9e9fbbef36cd408629450ce30ae8eeab3abec2a79e847f868c"
+}

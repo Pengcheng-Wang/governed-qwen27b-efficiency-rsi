@@ -1,0 +1,607 @@
+{
+  "status": "FRONTIER_SCREEN_COMPLETED_INNER_DAPO_LOOP_NO_GO",
+  "inner_dapo_weight_loop_step0_verdict": "NO_GO",
+  "inner_dapo_weight_loop_no_go_reasons": [
+    "B1_DAPO_PUBLISHED_GOLD_CONTRADICTIONS_AND_UNIT_FALSE_NEGATIVES",
+    "STEP2_DAPO_ALL_ROLLOUT_P99_RIGHT_CENSORED_AT_32768",
+    "S3_DAPO_CONFIRM200_AND_RETENTION150_INTERSECTION_UNDERPOWERED_FOR_1_TO_2PP"
+  ],
+  "screened_unique_problems": 96,
+  "draws_per_problem": 8,
+  "total_rollouts": 768,
+  "all_rollout_finish_reason_counts": {
+    "length": 36,
+    "stop": 732
+  },
+  "overall_rollout_stop_rate": 0.953125,
+  "overall_rollout_truncation_rate": 0.046875,
+  "all_rollout_output_token_quantiles": {
+    "count": 768,
+    "p50": 3387.5,
+    "p90": 24670.900000000012,
+    "p95": 31930.1,
+    "p99": 32768.0,
+    "max": 32768.0
+  },
+  "dapo_cap_headroom_check": {
+    "cap_tokens": 32768,
+    "all_rollout_p95_tokens": 31930.1,
+    "all_rollout_p99_tokens": 32768.0,
+    "right_censored_at_cap": true,
+    "passes_1p5x_uncensored_p99": false
+  },
+  "total_rollout_wall_seconds_sum": 10573.98187505221,
+  "total_rollout_assigned_gpu_hours": 5.874434375029006,
+  "total_generated_completion_tokens": 5784296,
+  "dense_restem_retained_raw_completion_tokens": 204211,
+  "discarded_rollout_completion_tokens": 5580085,
+  "trivial_8_of_8_problems": 60,
+  "trivial_8_of_8_fraction": 0.625,
+  "unsolved_0_of_8_problems": 7,
+  "unsolved_0_of_8_fraction": 0.07291666666666667,
+  "learnable_mixed_problems": 29,
+  "learnable_fraction": 0.3020833333333333,
+  "high_leverage_1to6_problems": 18,
+  "dense_full_valid_trace_length_quantiles": {
+    "count": 161,
+    "p50": 9654.0,
+    "p90": 26146.0,
+    "p95": 28563.0,
+    "p99": 31532.800000000003,
+    "max": 32758
+  },
+  "moe_full_valid_trace_length_quantiles": {
+    "count": 641,
+    "p50": 2871.0,
+    "p90": 13662.0,
+    "p95": 20138.0,
+    "p99": 29048.600000000017,
+    "max": 32758
+  },
+  "moe_valid_traces_over_4k_fraction": 0.36817472698907955,
+  "substantive_b1_verifier_and_gold_audit": {
+    "literal_label_replay_hits_of_768": 641,
+    "semantic_audit_status": "FAIL_B1_UNIT_CONTRACT_AND_GOLD_DEFECTS",
+    "unit_format_false_negatives": [
+      {
+        "id": "dapo:8f61f04c-152c-437d-92fc-ce564e9630f3",
+        "published_gold": "30",
+        "affected_draws": 5,
+        "issue": "Problem explicitly asks percentage saved (45/150 = 30%); five boxed 30\\% rollouts fail strict integer-only comparison without problem-specific unit contracts."
+      },
+      {
+        "id": "dapo:6e53432c-8abc-4693-80d8-1e09b7c9c691",
+        "published_gold": "2",
+        "affected_draws": 1,
+        "issue": "One rollout outputs boxed 2x2 for square dimension when published integer gold is 2."
+      }
+    ],
+    "published_gold_contradictions": [
+      {
+        "id": "dapo:b57078e1-3650-425b-a982-22189de7e057",
+        "published_gold": "12",
+        "issue": "CRT yields 3 positive roots below 10^2006 with sum 10^2006 + 2 (verified by small-n brute force n=1..4); published gold 12 contradicts exact mathematics."
+      },
+      {
+        "id": "dapo:e09849b4-2e5d-4b65-be71-a83701cb1e1b",
+        "published_gold": "3",
+        "issue": "Prompt asks for all cases while published gold is 3; exact parameters a in {3/8, 4/13, 8/27} yield 3 solutions to the first inequality and 2, 3, 4 respectively to the second."
+      }
+    ]
+  },
+  "panels": {
+    "dense_frontier_restem_r1.jsonl": {
+      "sha256": "0e8eecebd199790b93e07e2602797814d896cbc2ba6a97376463be4341f0d1f9",
+      "rows": 32,
+      "unique_questions": 21,
+      "supervised_tokens": 204208,
+      "retained_raw_output_tokens": 204211,
+      "discarded_raw_output_tokens": 5580085,
+      "policy_note": "Archived diagnostic panel (inner DAPO loop disposed NO_GO at Step 0); <=2 uniform verified stop traces/problem (vs <=10 in Singh et al. 2023 Sec. 3), length-filtered <=12288 tokens."
+    },
+    "moe_factorial_m1_short4k.jsonl": {
+      "sha256": "5c618c432a790d72208a71fc7a9e3fcdc81ac33f93ba8d382b408ce1592b390c",
+      "rows": 160,
+      "unique_questions": 67,
+      "supervised_tokens": 307099,
+      "retained_raw_output_tokens": 307099,
+      "discarded_raw_output_tokens": 5477197,
+      "policy_note": "Archived diagnostic panel (MoE loop disposed NO_GO at Step 0); length-filtered <=4096 tokens."
+    },
+    "moe_factorial_m2_unbiased12k.jsonl": {
+      "sha256": "dfefcb18e691352ee7a54e8651bd715aac1c3884d893dcd20f8469b74b24f121",
+      "rows": 160,
+      "unique_questions": 84,
+      "supervised_tokens": 590989,
+      "retained_raw_output_tokens": 590996,
+      "discarded_raw_output_tokens": 5193300,
+      "policy_note": "Archived diagnostic panel (MoE loop disposed NO_GO at Step 0); length-filtered <=12288 tokens (filename 'unbiased12k' retained for artifact continuity; still length-filtered at 12K)."
+    },
+    "dapo_search_val80.jsonl": {
+      "sha256": "98c9ad7caa5e58949a8e93f6d03735c05a8615198fffd9ef6253aedadd1bdbf1",
+      "rows": 80
+    }
+  },
+  "per_problem_summary": [
+    {
+      "id": "dapo:04311456-7a7d-4f28-9601-1e8d779a7367",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:044cbae7-d7eb-4631-8259-cfd260770dca",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:0ae34be4-bb4b-4ed1-9718-ce82f78d1597",
+      "lenient_successes_of_8": 5,
+      "strict_verified_stop_traces": 5
+    },
+    {
+      "id": "dapo:0cb07d43-2db7-4ba5-9844-11dd1a4cf93c",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:117834d8-ce73-4c28-baa3-15182bef8370",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:122c3f30-a77f-4e2b-983a-7cc30c64504d",
+      "lenient_successes_of_8": 3,
+      "strict_verified_stop_traces": 3
+    },
+    {
+      "id": "dapo:16e91a7f-d3f3-4a74-bcea-5b0421c058f9",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:1729eb63-91bd-4cf2-8d2a-c644173e0c36",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:1765ca2d-2324-4e9d-b1b8-251de2864ae9",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:188dc277-7f1d-4907-9f8b-57039bd85044",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:19e7a65c-97a7-4bc6-9ab2-59c62019cf9d",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:1b2e951a-db85-4fc2-b902-45c61b119f34",
+      "lenient_successes_of_8": 3,
+      "strict_verified_stop_traces": 3
+    },
+    {
+      "id": "dapo:1b31fab6-aea3-4bc8-a640-ce37e168a4fd",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:1d4f73e9-aefe-4881-8cba-3325f17f4623",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:1eefca15-9204-4692-98ef-880884fff7e4",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:23fdde38-9949-49dd-8646-349ea8731946",
+      "lenient_successes_of_8": 3,
+      "strict_verified_stop_traces": 3
+    },
+    {
+      "id": "dapo:256f6567-46aa-438d-aed7-5f9cbad70d02",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:2833cb58-cc46-42c0-bda7-9fcaf6224139",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:29053cdf-165d-46de-b2b2-cb0d78c751eb",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:29c97a31-cf01-49dd-9f05-fde79c410f71",
+      "lenient_successes_of_8": 0,
+      "strict_verified_stop_traces": 0
+    },
+    {
+      "id": "dapo:2bd3f907-4ff0-4285-ab97-041ec8366132",
+      "lenient_successes_of_8": 6,
+      "strict_verified_stop_traces": 6
+    },
+    {
+      "id": "dapo:2daa464a-dd55-43d4-bffd-4d53ac8bd78f",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:319be8e0-e989-4703-9858-3685d625d378",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:31fe02ce-4583-4ef4-8cc1-ac4e3fb2a86e",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:38fd23b8-e07b-4d9b-a074-29a9dec1275d",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:3966717d-21d2-46b3-8785-33f79186dae9",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:3c8fccfe-b2fd-445b-9634-39c7f4b5b638",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:3f813e50-8bcf-445f-9102-dff3c654a5d3",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:3fbfa356-41eb-45c9-8226-469d1924d45b",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:410ed704-baf9-47b0-a162-6200ec4f887b",
+      "lenient_successes_of_8": 6,
+      "strict_verified_stop_traces": 6
+    },
+    {
+      "id": "dapo:432c8199-f720-4c99-bd80-a91f1530c8df",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:43680a1e-ef34-4d41-ad96-ec7736a07b09",
+      "lenient_successes_of_8": 0,
+      "strict_verified_stop_traces": 0
+    },
+    {
+      "id": "dapo:492b0813-63a5-44a6-8742-526164a384af",
+      "lenient_successes_of_8": 6,
+      "strict_verified_stop_traces": 6
+    },
+    {
+      "id": "dapo:512264d1-5ab0-42e3-8cbf-73db4659d25e",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:55c87c46-9641-4b53-9c11-011033b591d4",
+      "lenient_successes_of_8": 4,
+      "strict_verified_stop_traces": 4
+    },
+    {
+      "id": "dapo:58745189-53a0-46fc-b02b-1952c21e0952",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:5acddd4b-8708-442f-a6d8-85a9afe0f7ae",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:60f74da4-2c22-43b8-9510-4218fbb0fa76",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:6119797c-a32f-4a01-89bf-5a376072ab9c",
+      "lenient_successes_of_8": 0,
+      "strict_verified_stop_traces": 0
+    },
+    {
+      "id": "dapo:6474d872-7258-492c-b4a9-ccea89e6c4ae",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:69753844-8563-4c85-987b-298c5ec806f8",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:6aa5288f-9a47-4d0c-a8dd-876aba804b1c",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:6cb136fe-83e4-40d2-877a-b9d78dee1eee",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:6e53432c-8abc-4693-80d8-1e09b7c9c691",
+      "lenient_successes_of_8": 6,
+      "strict_verified_stop_traces": 6
+    },
+    {
+      "id": "dapo:6f411433-90bf-4a23-a9f0-f547d73e4f9d",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:731ecdd8-c70e-4bf3-9304-ae282d49cfff",
+      "lenient_successes_of_8": 0,
+      "strict_verified_stop_traces": 0
+    },
+    {
+      "id": "dapo:754558a9-9fcc-41e6-8ddc-484f53fc2f7c",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:766a5953-ef8b-44d2-a1de-d00a2e676399",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:7929dcd9-6168-47d7-9e28-63cf9725ec3a",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:7e8b550a-40d1-4492-a25c-444a52e458d4",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:837399cf-67d9-4a3b-8b70-3dd641d129a6",
+      "lenient_successes_of_8": 4,
+      "strict_verified_stop_traces": 4
+    },
+    {
+      "id": "dapo:8812779f-e26e-4a84-a099-ee41151b2133",
+      "lenient_successes_of_8": 6,
+      "strict_verified_stop_traces": 6
+    },
+    {
+      "id": "dapo:88ae59d0-f7d5-43bf-b245-fd9099ec8362",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:8ac321a0-666a-4c46-a563-fb204ff2339c",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:8f61f04c-152c-437d-92fc-ce564e9630f3",
+      "lenient_successes_of_8": 3,
+      "strict_verified_stop_traces": 3
+    },
+    {
+      "id": "dapo:90e8dd62-a631-42cd-9325-e409650b2b18",
+      "lenient_successes_of_8": 6,
+      "strict_verified_stop_traces": 6
+    },
+    {
+      "id": "dapo:91b6bac1-65af-4cbc-92ea-217afa08cceb",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:91ef9791-fede-4232-bb82-e9508a5e4da0",
+      "lenient_successes_of_8": 6,
+      "strict_verified_stop_traces": 6
+    },
+    {
+      "id": "dapo:97fed854-1681-4f6d-8300-98edca27b630",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:9dedc7ed-9bfe-4064-95ce-3e0c395c9ae9",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:a74f3ba3-c5dd-4e1b-8e11-cb9755d8f1db",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:a87bdfec-8b25-43bc-b422-aca3f93e6749",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:aad38c69-0fd7-4a5d-92e2-7bf49479dfd7",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:ad2132f2-23b9-46a8-80b3-f54ac0dce933",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:ae807376-ac79-4cf4-b22c-38aaa7528f60",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:aef61665-0192-4837-97c0-43985e444dcf",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:b25c07bf-035a-4edf-8d1d-36800c3c30e5",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:b57078e1-3650-425b-a982-22189de7e057",
+      "lenient_successes_of_8": 0,
+      "strict_verified_stop_traces": 0
+    },
+    {
+      "id": "dapo:b87f4092-981d-4897-9606-a6be39ab0593",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:bc3358bc-e160-4544-b49e-5cc05811a4ef",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:c1bf5f70-f501-4b5a-ba8f-63b72223871c",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:c33e21dc-eff3-4a45-ab5b-eee94512ed10",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:c3d180f2-74f9-49a5-b4dd-39693ea4e99a",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:c5513254-e369-46f5-a1d8-857ae68c863a",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:c687956b-033a-4e36-9295-1b7f2f0119ba",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:cab8df8f-dae3-4f11-8f01-c1338b6d3ea1",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:cb72c3f4-0eca-47b0-9761-787d36721cc0",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:d2b939d8-9a59-44e5-bbb1-ade165cfc495",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:d4a0489f-1b6d-47a7-8eab-5515335226fc",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:d6553f5e-3596-49d2-a825-81ce0e0300bc",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:de131021-4c93-4e80-aaca-36771a21836d",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:dfb91bc3-70b1-4e96-ab34-de83d362dea0",
+      "lenient_successes_of_8": 0,
+      "strict_verified_stop_traces": 0
+    },
+    {
+      "id": "dapo:e09849b4-2e5d-4b65-be71-a83701cb1e1b",
+      "lenient_successes_of_8": 0,
+      "strict_verified_stop_traces": 0
+    },
+    {
+      "id": "dapo:e25f25f2-aeb4-449d-914a-706d7b52ee4e",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:e71a1ebf-1844-49f6-997a-7169d3023c4a",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:e7462e53-52b4-41d8-ad25-d4a1d2fe80bc",
+      "lenient_successes_of_8": 7,
+      "strict_verified_stop_traces": 7
+    },
+    {
+      "id": "dapo:e74eceec-bf0a-4a74-8d33-d769d69986d0",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:e75e78c5-4bdd-42d1-b6d3-17e891c6acb3",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:e9161919-db60-4102-8e1a-5aaffbdbfea2",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:eeac4b42-7f23-46f0-8a1a-b8c77d4d8908",
+      "lenient_successes_of_8": 3,
+      "strict_verified_stop_traces": 3
+    },
+    {
+      "id": "dapo:f0668bc5-3e32-433d-b72b-8da5ffb16eaf",
+      "lenient_successes_of_8": 6,
+      "strict_verified_stop_traces": 6
+    },
+    {
+      "id": "dapo:f1422994-4f95-440e-bfcf-51d8a710510e",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:f35a28d8-dac6-47e2-a150-252615a61cb0",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    },
+    {
+      "id": "dapo:f77c94ee-c5ee-433f-9a38-97b6a0f8fe13",
+      "lenient_successes_of_8": 5,
+      "strict_verified_stop_traces": 5
+    },
+    {
+      "id": "dapo:fd17cbaf-a24b-4763-bf78-fece5c142cab",
+      "lenient_successes_of_8": 3,
+      "strict_verified_stop_traces": 3
+    },
+    {
+      "id": "dapo:fe236e58-20e9-4908-a903-cfc3a64c5014",
+      "lenient_successes_of_8": 8,
+      "strict_verified_stop_traces": 8
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "status": "SERVING_AA_CALIBRATED",
+  "paired_blocks": 5,
+  "total_runs": 10,
+  "mean_dataset_seconds": 279.45334440341685,
+  "se_aa_dataset_seconds": 5.800541782805487,
+  "per_block_sd_dataset_seconds": 12.97040573268089,
+  "mean_output_tokens_per_second": 215.59153794807426,
+  "se_aa_output_tokens_per_second": 3.902964844955396,
+  "mean_tpot_p95_ms": 22.644050420997267,
+  "se_aa_tpot_p95_ms": 0.018840718235736187,
+  "blocks": [
+    {
+      "block_index": 0,
+      "seed": 20261117,
+      "arms": {
+        "A1": {
+          "dataset_seconds": 239.88028014008887,
+          "output_tokens_per_second": 195.89772019841277,
+          "tpot_p95_ms": 22.72458207336623,
+          "board_joules": 158571.5583719013,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.90625
+        },
+        "A2": {
+          "dataset_seconds": 234.68997238506563,
+          "output_tokens_per_second": 200.23011431821325,
+          "tpot_p95_ms": 22.624911400000254,
+          "board_joules": 157937.20524440682,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.90625
+        }
+      }
+    },
+    {
+      "block_index": 1,
+      "seed": 20261118,
+      "arms": {
+        "A2": {
+          "dataset_seconds": 204.94237781898119,
+          "output_tokens_per_second": 267.41662989978306,
+          "tpot_p95_ms": 22.714305835920165,
+          "board_joules": 138357.98642503112,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.875
+        },
+        "A1": {
+          "dataset_seconds": 234.8225278761238,
+          "output_tokens_per_second": 247.25907060599192,
+          "tpot_p95_ms": 22.7206829191158,
+          "board_joules": 158301.19818379983,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.875
+        }
+      }
+    },
+    {
+      "block_index": 2,
+      "seed": 20261119,
+      "arms": {
+        "A1": {
+          "dataset_seconds": 332.1512647259515,
+          "output_tokens_per_second": 185.48476716122644,
+          "tpot_p95_ms": 22.51589642465981,
+          "board_joules": 223357.78091075688,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.875
+        },
+        "A2": {
+          "dataset_seconds": 332.15034356107935,
+          "output_tokens_per_second": 185.48528157301357,
+          "tpot_p95_ms": 22.513038391009285,
+          "board_joules": 223434.9977312768,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.875
+        }
+      }
+    },
+    {
+      "block_index": 3,
+      "seed": 20261120,
+      "arms": {
+        "A2": {
+          "dataset_seconds": 254.2122946549207,
+          "output_tokens_per_second": 245.8575030166827,
+          "tpot_p95_ms": 22.67403629585683,
+          "board_joules": 171272.54166871496,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.875
+        },
+        "A1": {
+          "dataset_seconds": 254.2511498609092,
+          "output_tokens_per_second": 245.81993054580593,
+          "tpot_p95_ms": 22.684728261608416,
+          "board_joules": 171615.18616588152,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.875
+        }
+      }
+    },
+    {
+      "block_index": 4,
+      "seed": 20261121,
+      "arms": {
+        "A1": {
+          "dataset_seconds": 353.72705195005983,
+          "output_tokens_per_second": 191.226539296604,
+          "tpot_p95_ms": 22.635671782275477,
+          "board_joules": 237743.8677428678,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.90625
+        },
+        "A2": {
+          "dataset_seconds": 353.70618106098846,
+          "output_tokens_per_second": 191.2378228650087,
+          "tpot_p95_ms": 22.6326508261604,
+          "board_joules": 238301.68062430221,
+          "stop_rate": 1.0,
+          "lenient_accuracy": 0.90625
+        }
+      }
+    }
+  ]
+}

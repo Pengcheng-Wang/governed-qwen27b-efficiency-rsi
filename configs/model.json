@@ -1,0 +1,26 @@
+{
+  "repo_id": "Qwen/Qwen3.8-27B",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "architecture": "Qwen3_5ForConditionalGeneration",
+  "model_directory": "models/dense27_base",
+  "dtype": "bfloat16",
+  "text_only_workload": true,
+  "preserve_original_architecture": true,
+  "native_mtp_required": true,
+  "expected_mtp_tensor_count": 15,
+  "expected_checkpoint_bytes": 55562855904,
+  "default_thinking": true,
+  "reasoning_effort": "xhigh",
+  "reasoning_effort_supported": true,
+  "eos_token_ids": [248046, 248044],
+  "pad_token_id": 248044,
+  "native_context": 262144,
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0
+  }
+}

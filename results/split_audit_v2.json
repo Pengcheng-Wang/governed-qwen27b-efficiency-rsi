@@ -1,0 +1,149 @@
+{
+  "status": "DISJOINT_THREE_WAY_VERIFIED",
+  "seed": 20261117,
+  "search_splits_preserved_from_plane1": true,
+  "v1_oracle_sha256_verified": {
+    "development_math200.jsonl": "6225cee21eb467f32f2b633fb91a2b59c15fffc4faafb8b9241ffee22243e92d",
+    "rl_dapo_candidates.jsonl": "1f69972d2705bc10b82bfcae346d5efe12fc5c79d3b5d1b6aa0b2494c187e7bf",
+    "v1_archive_evidence_tar_gz": "a1ce1c5a3ea7019c72b1596b62b921d0b43b9907cbaceff2f1e5b8efd3525bfa"
+  },
+  "provenance": {
+    "math_train": {
+      "repo": "DigitalLearningGmbH/MATH-lighteval",
+      "revision": "0530c78699ea5e8eb5530600900e1f328b48acad",
+      "file": "data/train-00000-of-00001.parquet",
+      "expected_rows": 7500,
+      "file_sha256": "eca6e667f4305dd5e5ba09b4fd55e7f3174a0fbe361cdfd4c44758b593a76933",
+      "rows": 7500
+    },
+    "math500": {
+      "repo": "HuggingFaceH4/MATH-500",
+      "revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+      "file": "test.jsonl",
+      "expected_rows": 500,
+      "file_sha256": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132",
+      "rows": 500
+    },
+    "aime24": {
+      "repo": "HuggingFaceH4/aime_2024",
+      "revision": "2fe88a2f1091d5048c0f36abc874fb997b3dd99a",
+      "file": "data/train-00000-of-00001.parquet",
+      "expected_rows": 30,
+      "file_sha256": "26139847601a5037c237d5928b195e7260ca8074cf4f264b794af42847f79ccf",
+      "rows": 30
+    },
+    "aime25": {
+      "repo": "yentinglin/aime_2025",
+      "revision": "6f71d77b0b89b9dabe07ab466c51df33f514df7f",
+      "file": "data/train-00000-of-00001-243207c6c994e1bd.parquet",
+      "expected_rows": 30,
+      "file_sha256": "b74b507c1a4de7c9fafd2c83dfe2ef7b80579bcf0e0a754a1765db0f21c205fc",
+      "rows": 30
+    },
+    "dapo_math_17k": {
+      "repo": "BytedTsinghua-SIA/DAPO-Math-17k",
+      "revision": "65877096c24ffa7abc4e4fa5edb95cf3413a5674",
+      "file": "data/dapo-math-17k.parquet",
+      "file_sha256": "534375d6bb8630d22ab46a56e11f2ffec1d288d8f7d04099bc82d68948705941"
+    },
+    "mmlu_pro": {
+      "repo": "TIGER-Lab/MMLU-Pro",
+      "revision": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+      "files": [
+        {
+          "file": "data/test-00000-of-00001.parquet",
+          "sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8"
+        }
+      ]
+    }
+  },
+  "cross_split_exact_or_13gram_overlaps": 0,
+  "confirm_and_holdout_vs_all_v1_eval_and_train_overlaps": 0,
+  "v1_quarantined_counts": {
+    "historical_math500_aime24_aime25": 560,
+    "v1_development_math200": 200,
+    "v1_sft_systems1024": 1024,
+    "v1_dapo_screen256_union_banked_grpo200": 450,
+    "v1_banked_grpo_moe_unique_dapo_prompts": 200,
+    "v1_mmlu_pro_prefix_35_per_cat": 455
+  },
+  "search_and_sft_historical_v1_overlap_counts": {
+    "math_search128": 33,
+    "sft_systems1024_v2": 230,
+    "sft_heldout64_v2": 18,
+    "dapo_search240": 23
+  },
+  "holdout_labels_outside_candidate_scope": true,
+  "sft_systems1024_input_tokens": 340797,
+  "sft_systems1024_supervised_tokens": 254724,
+  "splits": {
+    "dapo_confirm200.jsonl": {
+      "sha256": "5275ed9ba6a29d51bf6927162ac4ba554dc3386247bef0b0a55def4b6b02b6f0",
+      "rows": 200
+    },
+    "dapo_holdout200_prompts.jsonl": {
+      "sha256": "4cc62580e3a200ea12348cd9e17105ff6fc826187da1bcc30c64faee16b55075",
+      "rows": 200
+    },
+    "dapo_search240.jsonl": {
+      "sha256": "f616d8275760d97c4f0c8731e80ab753e1cfad127a1ed0c4c063a738306088b1",
+      "rows": 240
+    },
+    "dapo_search_shard_a48.jsonl": {
+      "sha256": "23bb6e389d1bc4d22e3007bfde4bd0258e1e387de7a006582d62aba37728cde8",
+      "rows": 48
+    },
+    "dapo_search_shard_b48.jsonl": {
+      "sha256": "0273c880ec73a5d246587e2a2e9187f44ed8abec93976d085cf28f944445df4f",
+      "rows": 48
+    },
+    "math_confirm1280.jsonl": {
+      "sha256": "570e64635f7498e210aeb669da6eee8dc57c04edcf4e7ada45677875b447be64",
+      "rows": 1280
+    },
+    "math_holdout512_prompts.jsonl": {
+      "sha256": "af22e7060fe99229fc43202467c9b0f2e3ee5cd77fee54a6bf99252ff1ff4e01",
+      "rows": 512
+    },
+    "math_search128.jsonl": {
+      "sha256": "17c3e26014f21f03cb4896200c4f3de1040cf7c41ef02ed56e8ca5cff95be456",
+      "rows": 128
+    },
+    "math_search_block32.jsonl": {
+      "sha256": "1bb097b9c34434b641da9a9b8fea1541c7f56e2614a60fa6bff085310dcca6ba",
+      "rows": 32
+    },
+    "math_search_fast64.jsonl": {
+      "sha256": "f4b14c3d3da004730bd4437be8acfae005eab2c537ab5c174abc7629eaef5fd7",
+      "rows": 64
+    },
+    "retention_confirm150.jsonl": {
+      "sha256": "148f60caaa0afa74d135d55c41c5e575469917090f54f1078bfdf9672ce084b4",
+      "rows": 150
+    },
+    "retention_holdout150_prompts.jsonl": {
+      "sha256": "de9cc6fcf559e2f8c365d1abf77dd78c3b6be52f834154538df441de23ecf9d5",
+      "rows": 150
+    },
+    "sft_heldout64_v2.jsonl": {
+      "sha256": "3746e54e2889a05a9d9778bda9ade5214f227e450437caf2b042d5c5c5bf30e6",
+      "rows": 64
+    },
+    "sft_systems1024_v2.jsonl": {
+      "sha256": "34eeb9965bf36faef6da60e3240416e8e55ebd83b221ad42aa0af95b77ead0d4",
+      "rows": 1024
+    }
+  },
+  "sealed_holdout_label_receipts": {
+    "dapo_holdout200_labels.json": {
+      "sha256": "2b0c97d2f073e905dd4e68edb11a8550f6bce208e9e71dd1ac54ba4f86daf9dc"
+    },
+    "math_holdout512_labels.json": {
+      "sha256": "27aa6ca8dd82495551705bf5f4ebe9618c7d568adb19e101cd9ac4bdaae0d094"
+    },
+    "retention_holdout150_labels.json": {
+      "sha256": "77896004b162b23944ce19f01133af0a1387b1b012e08169496aef5cc4f79063"
+    }
+  },
+  "pretraining_contamination_note": "Public HuggingFace source corpora have unknown pretraining overlap with Qwen3.8/3.5. All v2 splits are strictly pairwise disjoint (0 exact and 0 13-gram overlaps across all 10 splits). All Confirm and Protected Single-Touch Holdout splits have 0 exact and 0 13-gram overlap with the complete v1 eval+training exposure union (MATH-500, AIME24/25, v1_dev200, v1_sft_systems1024, v1_dapo256, and v1_mmlu_pro200); historical overlap counts on preserved Plane-1 Search/SFT panels are explicitly disclosed in search_and_sft_historical_v1_overlap_counts."
+}

@@ -1,0 +1,34 @@
+# Strict local-only & credential exclusion rules
+.local/
+progress.md
+PROGRESS.md
+.aml*
+*resource.json
+*credential*
+*secret*
+*token*
+*.key
+*.pem
+.env*
+
+# Heavy / mutable runtime artifacts (splits, calibration traces, and run summary.json files ARE tracked)
+models/
+runs/
+logs/
+.venv-*/
+results/inference/*/*.jsonl.gz
+results/inference/*/request_contract.json
+results/inference/*/telemetry.json
+results/training/*/updates.jsonl
+results/training/*/telemetry.json
+checkpoints/
+worktrees/
+cache/
+tmp/
+__pycache__/
+*.py[cod]
+*.tar.gz
+*.tgz
+*.partial
+.hop-*.sh
+.transfer-*.tgz

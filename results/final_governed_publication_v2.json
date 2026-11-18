@@ -1,0 +1,375 @@
+{
+  "schema_version": "2.0",
+  "study_id": "AILab_Qwen27B_Governed_v2",
+  "predecessor_study_id": "AILab_Qwen27B_Efficiency_v1",
+  "predecessor_archive_verified": {
+    "archive": "evidence_20261101T060439Z_f538d3.tar.gz",
+    "sha256": "a1ce1c5a3ea7019c72b1596b62b921d0b43b9907cbaceff2f1e5b8efd3525bfa",
+    "verified_member_count": 780,
+    "confirm_and_protected_holdout_historical_overlaps": 0,
+    "parent_quarantine_receipt_sha256": "2a6abeb1257b8485542cd5f175ca7e5e1ca351281681d27c905fde382c6b17b4"
+  },
+  "completed_at_utc": "2026-11-17T20:14:50.762765+00:00",
+  "governance_and_provenance": {
+    "skill": "governed-loop-optimization (Archetype D: Two-Plane Hybrid)",
+    "protocol_epoch": "plane2_frozen_hermetic_train_only_v3",
+    "frozen_git_commit_head": "6390384bdc826c89da74ca2f9296b337837c650a",
+    "immutable_manifest_file_sha256": "b729689968c23185041cbaa186c2d7a39d08b53a4bfa5376b834624221c5da18",
+    "manifest_root_sha256": "b8119956218d3bbb1561464c2827d07121017922d05d47b42decc465e8a0fbbc",
+    "protected_entry_count": 85,
+    "parent_byte_receipt_sha256": "5136c877c210c1993b4d05de2a0c70fbbef5deea71cdfe5b1a4a72ba97050ca5",
+    "parent_training_only_admission_sha256": "928e94bbc44020082ff5110859c491b9ad4a00e110f1cd1664f43943716be337",
+    "final_ledger_file": "results/governed_ledger_v2.jsonl",
+    "final_ledger_file_sha256": "455ce99f9c4e4f77f3850405179793cc9f7be19d2c597301e85f8f31ae1b8a04",
+    "final_ledger_head_sha256": "560948b57e4a00d8a8ae514abe7a184efe8bc92733686ef6d642b88ca0f02731",
+    "final_ledger_entry_count": 2,
+    "promoted_candidates_count": 0,
+    "confirm_trials_executed": 0,
+    "post_ledger_checkpoint_merge_executions": 0,
+    "protected_holdout_touches": {
+      "math_holdout512_prompts.jsonl": 0,
+      "dapo_holdout200_prompts.jsonl": 0,
+      "retention_holdout150_prompts.jsonl": 0,
+      "math_confirm1280.jsonl": 0
+    },
+    "isolation_boundary_disclosure": "Out-of-process scoring (python -I -B), per-run detached Git scratch worktrees (/tmp/q27wt_<nonce>) with isolated ephemeral compiler/runtime caches (HermeticTrialSandbox), coordinator-only holdout label storage, and independent parent byte/ledger receipts enforce strict protocol and artifact integrity; processes share one container UID rather than separate OS-kernel privilege domains.",
+    "parent_search_reconciliation_receipt_sha256": "9578fdbafc250dc185ac8798e2fc1d4f903f948ff91c4f7f45f9e9ce066d6bd2"
+  },
+  "plane1_engineering_and_calibration_advances_over_v1": {
+    "b1_set_and_percent_safe_symbolic_verifier": {
+      "verifier_sha256": "a3aa8c7127f830c0d57257075c29422f942e3453e0608ea72225f64a89880ce0",
+      "linux_default_timeout_qualification_sha256": "e80961522585dd2b754a987cc2d32be81c8dd6800d6ff400294d0fa4b749c47c",
+      "unit_tests": "20/20 PASS on Linux Python 3.12.3 / math-verify 0.9.0 / SymPy 1.14.0 with unmodified default production timeouts",
+      "historical_40case_v1_audit": {
+        "baseline_passes_preserved": "20/20",
+        "post_repair_acceptances": "30/40 (9 new notation/unit/set fixes + 1 historical false negative; 7 reference-incorrect, 1 unusable channel, 2 quarantined references rejected; 0 execution errors)",
+        "semantic_audit_receipt_sha256": "96ce45eb31eea2f404061393ffdbc03ca0e50cffb5a089e3f2d392e9e882f6a4"
+      }
+    },
+    "one_shot_int4_plus_native_mtp3_loader_resolution": {
+      "status": "INT4_MTP3_NATIVE_LOADER_RESOLVED (Plane-1 one-shot engineering repair and Search diagnostic, NOT a confirmed promotion)",
+      "model": "Qwen/Qwen3.8-27B revision 1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0 (Qwen3_5ForConditionalGeneration, 18 shards, 15 native MTP tensors)",
+      "mechanism": "Selective GPTQ W4A16 quantization of backbone linears while preserving all 15 mtp.* tensors + lm_head in native BF16 on 1x A100-80GB (18.7 GiB weights)",
+      "rescored_search128_descriptive_comparison": {
+        "note": "Unselected 128-problem Search panel only (single run per arm); neither a confirmed promotion nor a decoupled attribution separating quantization from TP=2->TP=1.",
+        "S0_bf16_tp2": {
+          "lenient_accuracy": 0.953125,
+          "dataset_seconds": 719.3735498609021,
+          "assigned_gpu_hours": 0.39965197214494563,
+          "slo_correct_goodput_per_second": 0.15291082084025687
+        },
+        "S1_bf16_tp2_mtp3": {
+          "lenient_accuracy": 0.9609375,
+          "dataset_seconds": 407.0079087950289,
+          "assigned_gpu_hours": 0.2261155048861272,
+          "slo_correct_goodput_per_second": 0.3022054297769024
+        },
+        "S2_int4_tp1": {
+          "lenient_accuracy": 0.9453125,
+          "dataset_seconds": 586.2095182670746,
+          "assigned_gpu_hours": 0.1628359772964096,
+          "slo_correct_goodput_per_second": 0.20641084156684217
+        },
+        "S3_int4_tp1_mtp3_repaired": {
+          "lenient_accuracy": 0.96875,
+          "dataset_seconds": 455.78753657708876,
+          "assigned_gpu_hours": 0.12660764904919133,
+          "slo_correct_goodput_per_second": 0.27205658349332135,
+          "paired_vs_S0": {
+            "wins": 2,
+            "losses": 0,
+            "ties": 126
+          }
+        },
+        "frozen_slo_correct_goodput_predicate": "code/infer_v2.py lines 321-333: count(requests with finish_reason=='stop' AND not natural_stop_lenient_parse_failure AND ttft_seconds<=2.0 AND (tpot_seconds is None or tpot_seconds<=0.1) AND including_client_queue_seconds<=600.0 AND lenient_correct==True) / dataset_seconds under closed-loop client concurrency=8."
+      }
+    },
+    "exact_policy_hermetic_aa_calibrations": {
+      "training_hermetic_aa": {
+        "artifact": "results/plane1_train_aa_hermetic_v2.json",
+        "sha256": "635befffd897b4e33a8352bb57e0dec103078a0ba0656e378064187ac9fd575b",
+        "mean_loop_seconds": 308.11753996443,
+        "se_aa_loop_seconds": 1.1703711188285073,
+        "step0_verdict": "GO (preflight plug-in planning estimate 0.99965 >= 0.80, conditional on healthy DDP launches plus unmeasured preflight planning assumptions: delta_plan=55.0s gain, +0.0010 NLL shift, and 58.5 GiB candidate peak memory — not actual Search observations or a finite-sample confidence guarantee)"
+      },
+      "serving_hermetic_aa": {
+        "artifact": "results/plane1_serving_aa_hermetic_v2.json",
+        "sha256": "be8cc5c1429cf658f63cea76be51e609595ffd9140c7d21955c9eeb00b1e7369",
+        "mean_dataset_seconds": 250.56752295615152,
+        "se_aa_assigned_gpu_seconds": 113.59153189115702,
+        "observed_matched_seed_output_divergence_pairs": "127/160 matched (ID, prompt_hash, seed) pairs emitted different text (e.g., Block 0 max tokens 12,249 -> 23,547; vLLM 0.29.0 default non-reproducibility and continuous-batching numerical/scheduling effects are plausible context, not a uniquely proven cause)",
+        "step0_verdict": "NO_GO (analytic Normal primary power 0.6376329614 < 0.80, plug-in complete-predicate lower bound 0.46113159 < 0.80 under preserved unrelaxed min_improvement=310 GPU-s / delta_plan=350 GPU-s / 2.0pp NI gates)"
+      }
+    }
+  },
+  "step0_nogo_disposed_loops": {
+    "loop_dense_serving_confirm_v2": {
+      "verdict": "NO_GO",
+      "preflight_config": "configs/step0_serving_confirm_nogo.json",
+      "preflight_config_sha256": "3139754268774f2bdf6f7910fe520088b13fe7016b8a676818b0b2c2ef6d09ae",
+      "reason": "Post-B4 hermetic serving A/A calibration (plane1_serving_aa_hermetic_v2.json) measured se_AA=113.591532 GPU-s (wall SE=56.795766s across 5 blocks; 127/160 matched prompt/seed pairs exhibited observed output divergence, with vLLM 0.29.0 continuous-batching numerical/scheduling effects as plausible context rather than a uniquely proven cause). Under preserved min_improvement=310.0 GPU-s, delta_plan=350.0 GPU-s, K=1, alpha=0.025, primary Normal planning power is 0.6376329614 < 0.80 (plug-in MC=0.6397), failing the 80% Confirm promotion power gate."
+    },
+    "loop_dense_restem_dapo_v2": {
+      "verdict": "NO_GO",
+      "reasons": [
+        "B1_DAPO_PUBLISHED_GOLD_CONTRADICTIONS_AND_UNIT_FALSE_NEGATIVES",
+        "STEP2_DAPO_ALL_ROLLOUT_P99_RIGHT_CENSORED_AT_32768 (36/768 = 4.6875% length truncations; p95=31930.1, p99=32768.0)",
+        "S3_DAPO_CONFIRM200_AND_RETENTION150_INTERSECTION_UNDERPOWERED_FOR_1_TO_2PP"
+      ]
+    },
+    "loop_moe_qwen35_35b_a3b_v2": {
+      "verdict": "NO_GO",
+      "reasons": [
+        "MOE_CAP_98K_DEGENERATE_TAIL_NO_GO (under study presence_penalty=0.0: 3/128 = 2.34% non-terminating at 98304 tokens, p99=98304 fails 1.5x uncensored p99; official model card recommends presence_penalty=1.5 to curb endless repetition with language-mixing caveat, documented in sources/research_model_sampling_policy_review.json)"
+      ]
+    }
+  },
+  "plane2_admitted_execution_outcome": {
+    "loop_id": "loop_train_systems_v2",
+    "stage_executed": "p2_train_search_v3 (3-block 3x3 Latin Square over [T0, T1, T2], 9 DDP runs on 8x A100-SXM4-80GB node-1 inside per-run HermeticTrialSandbox)",
+    "adjudication_status": "HALTED_NO_ELIGIBLE_SEARCH_FINALIST",
+    "selected_finalist_arm": null,
+    "confirm_launched": false,
+    "incumbent_retained": "T0_ddp8_micro1_nobucket",
+    "ledgered_trials": {
+      "trial_01_train_search_t1_vs_t0": {
+        "baseline_primary": 309.3330550416528,
+        "candidate_id": "T1_ddp8_micro4_nobucket",
+        "candidate_primary": 316.5847059672233,
+        "cli_returncode": 1,
+        "consecutive_rollbacks": 1,
+        "decision": "ROLLBACK",
+        "decision_reason": "guardrail_or_regression",
+        "decision_stage": "search",
+        "dev_looks_used": 1,
+        "direction": "minimize",
+        "effective_alpha_one_sided": 0.05,
+        "effective_se": 1.1703711188285073,
+        "entry_sha256": "73141b1792a03cf2d9141e4f77b56d7c17c6bd1b23a16a475df33bcfe7f13941",
+        "halt_recommended": false,
+        "hypothesis": "Registered independent-vs-baseline Search screen: per-rank micro-batch=4 under exact global-token scaling cuts DDP loop_seconds by >=10s vs T0 without >0.5% relative NLL drift.",
+        "incumbent_primary": 309.3330550416528,
+        "lcb_one_sided_vs_baseline": -9.176740103127312,
+        "lcb_one_sided_vs_incumbent": -9.176740103127312,
+        "prev_entry_sha256": "GENESIS",
+        "primary_metric": "loop_seconds",
+        "primary_statistic": "mean",
+        "protocol_id": "loop_train_systems_search_v2",
+        "raw_delta_vs_incumbent": 7.251650925570459,
+        "signed_improvement": -7.251650925570459,
+        "timestamp_utc": "2026-11-17T20:03:30.457311+00:00",
+        "trial_id": "trial_01_train_search_t1_vs_t0",
+        "tripwires": [
+          "cumulative_baseline_regression:lcb_vs_base=-9.176740<-5.000000"
+        ],
+        "warnings": [
+          "low_cluster_count_for_mean:n_clusters=3"
+        ]
+      },
+      "trial_02_train_search_t2_vs_t0": {
+        "baseline_primary": 309.3330550416528,
+        "candidate_id": "T2_ddp8_micro4_length_bucket",
+        "candidate_primary": 299.90744014123146,
+        "cli_returncode": 1,
+        "consecutive_rollbacks": 2,
+        "decision": "ROLLBACK",
+        "decision_reason": "search_no_gain:signed_gain=9.425615<=min=10.000000",
+        "decision_stage": "search",
+        "dev_looks_used": 2,
+        "direction": "minimize",
+        "effective_alpha_one_sided": 0.05,
+        "effective_se": 1.1703711188285073,
+        "entry_sha256": "560948b57e4a00d8a8ae514abe7a184efe8bc92733686ef6d642b88ca0f02731",
+        "halt_recommended": false,
+        "hypothesis": "Registered independent-vs-baseline Search screen: micro-batch=4 plus within-update length bucketing cuts DDP loop_seconds by >=10s vs T0 without >0.5% relative NLL drift.",
+        "incumbent_primary": 309.3330550416528,
+        "lcb_one_sided_vs_baseline": 7.500525722864498,
+        "lcb_one_sided_vs_incumbent": 7.500525722864498,
+        "prev_entry_sha256": "73141b1792a03cf2d9141e4f77b56d7c17c6bd1b23a16a475df33bcfe7f13941",
+        "primary_metric": "loop_seconds",
+        "primary_statistic": "mean",
+        "protocol_id": "loop_train_systems_search_v2",
+        "raw_delta_vs_incumbent": -9.425614900421351,
+        "signed_improvement": 9.425614900421351,
+        "timestamp_utc": "2026-11-17T20:03:32.490613+00:00",
+        "trial_id": "trial_02_train_search_t2_vs_t0",
+        "tripwires": [],
+        "warnings": [
+          "low_cluster_count_for_mean:n_clusters=3"
+        ]
+      }
+    },
+    "arm_summaries_and_tradeoffs": {
+      "T0": {
+        "n_blocks": 3,
+        "run_names": [
+          "p2_train_search_b00_T0",
+          "p2_train_search_b01_T0",
+          "p2_train_search_b02_T0"
+        ],
+        "run_summary_sha256": {
+          "p2_train_search_b00_T0": "4a0ae5d791ad4cfc5dee50c8242f8f2e6f97e59a98373fe3e494b877bbb7bc11",
+          "p2_train_search_b01_T0": "1f49cc0d086e8793551ab8aa7c78698e248327b06b32e71a5936f36df0821069",
+          "p2_train_search_b02_T0": "e735a5b7e5336998a41104ba2a3e53dd09b54defaa6ac6e9a253eec83c7d69d2"
+        },
+        "input_tokens_per_run": 340797,
+        "supervised_tokens_per_run": 254724,
+        "padded_tokens_per_run": 340797,
+        "padding_over_input_fraction": 0.0,
+        "registered_primary_mean_loop_seconds_all_16_updates": 309.3330550416528,
+        "per_block_loop_seconds": [
+          310.237453046022,
+          308.3817646370735,
+          309.3799474418629
+        ],
+        "mean_process_seconds": 430.86346963226487,
+        "mean_supervised_tokens_per_second": 823.4668974743518,
+        "mean_after_nll": 0.6306517574032943,
+        "max_after_nll": 0.631077630068118,
+        "max_peak_allocated_gib": 55.14083385467529,
+        "mean_loop_board_joules": 417655.845793409,
+        "descriptive_finite_horizon_step_diagnostics": {
+          "interpretation_note": "Descriptive finite-horizon step-duration diagnostics only (not long-run steady-state throughput); every cold run and every step remains included in the registered primary loop_seconds result, and step timings alone do not uniquely isolate compiler/JIT execution from kernel/runtime effects.",
+          "update_1_mean_seconds": 123.36475008974473,
+          "updates_2_to_16_mean_of_run_medians_seconds": 11.236026031741252,
+          "updates_2_to_16_mean_of_run_means_seconds": 12.391259167141591,
+          "updates_6_to_16_mean_of_run_medians_seconds": 11.153015109244734
+        },
+        "pooled_partial_matmul_mfu": {
+          "pooled_lower_fraction": 0.045674220466316584,
+          "pooled_upper_fraction": 0.04580143956024933,
+          "pooled_lower_pct": 4.567422046631658,
+          "pooled_upper_pct": 4.5801439560249335
+        }
+      },
+      "T1": {
+        "n_blocks": 3,
+        "run_names": [
+          "p2_train_search_b00_T1",
+          "p2_train_search_b01_T1",
+          "p2_train_search_b02_T1"
+        ],
+        "run_summary_sha256": {
+          "p2_train_search_b00_T1": "205bf1518a1442e3edb8024ba30c0abea9b994f4ce64cd09b0ed76c2f02c1354",
+          "p2_train_search_b01_T1": "842edf71034938650460b57a559d0252167ea6a40d752b605783fee52d8f0ad4",
+          "p2_train_search_b02_T1": "ee582293b0b17f4d42e65c2ad6ec943d2d7eb463d463cf0dd068077d7b3de0d6"
+        },
+        "input_tokens_per_run": 340797,
+        "supervised_tokens_per_run": 254724,
+        "padded_tokens_per_run": 585964,
+        "padding_over_input_fraction": 0.7193930697746752,
+        "registered_primary_mean_loop_seconds_all_16_updates": 316.5847059672233,
+        "per_block_loop_seconds": [
+          316.18354131281376,
+          317.7886589758564,
+          315.7819176129997
+        ],
+        "mean_process_seconds": 437.77771036559716,
+        "mean_supervised_tokens_per_second": 804.6058523593434,
+        "mean_after_nll": 0.6291947025830393,
+        "max_after_nll": 0.6294706720143848,
+        "max_peak_allocated_gib": 60.4217004776001,
+        "mean_loop_board_joules": 460589.39566970174,
+        "descriptive_finite_horizon_step_diagnostics": {
+          "interpretation_note": "Descriptive finite-horizon step-duration diagnostics only (not long-run steady-state throughput); every cold run and every step remains included in the registered primary loop_seconds result, and step timings alone do not uniquely isolate compiler/JIT execution from kernel/runtime effects.",
+          "update_1_mean_seconds": 147.11422739923,
+          "updates_2_to_16_mean_of_run_medians_seconds": 7.2011871527259546,
+          "updates_2_to_16_mean_of_run_means_seconds": 11.281768429796728,
+          "updates_6_to_16_mean_of_run_medians_seconds": 6.896230636009325
+        },
+        "pooled_partial_matmul_mfu": {
+          "pooled_lower_fraction": 0.04462801230503679,
+          "pooled_upper_fraction": 0.044752317333814524,
+          "pooled_lower_pct": 4.462801230503679,
+          "pooled_upper_pct": 4.475231733381452
+        }
+      },
+      "T2": {
+        "n_blocks": 3,
+        "run_names": [
+          "p2_train_search_b00_T2",
+          "p2_train_search_b01_T2",
+          "p2_train_search_b02_T2"
+        ],
+        "run_summary_sha256": {
+          "p2_train_search_b00_T2": "06c4da297ef1962ba6811a6b23d78a0696c7c716846f9562697b5c034d16e835",
+          "p2_train_search_b01_T2": "6de634ec19ec80237ca93c4bf74ed96db051c6ac4b9acdb0fb739a2fb4181ff9",
+          "p2_train_search_b02_T2": "9aa8ab1a8251aac18a9e02aab8f73619372463c9c14c17f466b0d01826a3cf4b"
+        },
+        "input_tokens_per_run": 340797,
+        "supervised_tokens_per_run": 254724,
+        "padded_tokens_per_run": 535180,
+        "padding_over_input_fraction": 0.5703776735123842,
+        "registered_primary_mean_loop_seconds_all_16_updates": 299.90744014123146,
+        "per_block_loop_seconds": [
+          299.0909758938942,
+          300.1167838408146,
+          300.5145606889855
+        ],
+        "mean_process_seconds": 420.116260805012,
+        "mean_supervised_tokens_per_second": 849.3454496466674,
+        "mean_after_nll": 0.6293137792227014,
+        "max_after_nll": 0.6294800957803293,
+        "max_peak_allocated_gib": 60.89657688140869,
+        "mean_loop_board_joules": 431470.2872825305,
+        "descriptive_finite_horizon_step_diagnostics": {
+          "interpretation_note": "Descriptive finite-horizon step-duration diagnostics only (not long-run steady-state throughput); every cold run and every step remains included in the registered primary loop_seconds result, and step timings alone do not uniquely isolate compiler/JIT execution from kernel/runtime effects.",
+          "update_1_mean_seconds": 146.57227878738195,
+          "updates_2_to_16_mean_of_run_medians_seconds": 5.995787032647058,
+          "updates_2_to_16_mean_of_run_means_seconds": 10.191263798696712,
+          "updates_6_to_16_mean_of_run_medians_seconds": 5.766344573581591
+        },
+        "pooled_partial_matmul_mfu": {
+          "pooled_lower_fraction": 0.04710968873209122,
+          "pooled_upper_fraction": 0.04724090612025376,
+          "pooled_lower_pct": 4.710968873209122,
+          "pooled_upper_pct": 4.724090612025376
+        }
+      }
+    },
+    "tradeoff_summary_vs_T0": {
+      "T1_ddp8_micro4_nobucket": {
+        "loop_seconds_delta_vs_T0": 7.251650925570459,
+        "padded_tokens_per_run": 585964,
+        "padding_over_input_fraction": 0.7193930697746752,
+        "loop_board_joules_ratio_vs_T0": 1.1027964777907828,
+        "peak_allocated_gib_delta_vs_T0": 5.280866622924805,
+        "verdict": "ROLLBACK (316.5847s vs 309.3331s, +7.2517s slower across 3 Search blocks; 585,964 padded tokens vs 340,797 input tokens = +71.9393% padding; mean loop board energy 460,589.40 J vs 417,655.85 J = +10.28% higher; peak allocated memory 60.4217 vs 55.1408 GiB)"
+      },
+      "T2_ddp8_micro4_length_bucket": {
+        "loop_seconds_delta_vs_T0": -9.425614900421351,
+        "signed_improvement_seconds": 9.425614900421351,
+        "registered_search_min_improvement_seconds": 10.0,
+        "padded_tokens_per_run": 535180,
+        "padding_over_input_fraction": 0.5703776735123842,
+        "loop_board_joules_ratio_vs_T0": 1.0330761358382967,
+        "peak_allocated_gib_delta_vs_T0": 5.755743026733398,
+        "verdict": "ROLLBACK (299.9074s vs 309.3331s; signed_improvement=9.4256s <= registered Search min_improvement=10.0s across 3 Search blocks; 535,180 padded tokens = +57.0378% padding; mean loop board energy 431,470.29 J vs 417,655.85 J = +3.31% higher; peak allocated memory 60.8966 vs 55.1408 GiB)"
+      }
+    },
+    "workload_scope_boundary": "Short-reference (<=4K supervised traces), cold-cache 16-update SFT systems loop on data/splits/sft_systems1024_v2.jsonl; NOT 32K-context reasoning training and NOT demonstrated downstream reasoning-quality preservation (after_nll is an optimization-fidelity guardrail, not a reasoning-benchmark confirmation).",
+    "partial_matmul_mfu_metric_definition": "Pooled partial algorithmic matmul-only MFU against 312 dense BF16 TFLOP/s per participating A100: lower/upper reflects causal vs full-square attention accounting conventions — NOT a confidence interval, complete hybrid-model MFU, HFU, or GPU utilization. Useful unpadded matmul work is in the numerator; measured cold-loop time includes padding, activation recomputation, compiler, and runtime costs; Gated DeltaNet recurrence, convolution, normalization, activation, and optimizer arithmetic are omitted."
+  },
+  "historical_cross_study_context_readonly": {
+    "AILab_MultiLingal_v1_MI300X": "Read-only local synthesis of AILab_MultiLingal_v1/FINAL_RESULTS.md on Qwen3.8-27B showed naive LoRA-SFT (r1) left thinking math flat (mgsm_macro_think 93.6 -> 93.7) while inducing statistically significant collateral regressions on general/instruction benchmarks (gmmlu_macro_nothink -4.8 pts, ifeval_en_nothink -5.2 pts, marena_macro_winrate -10.9 pts), reinforcing governed-loop-optimization's B2/B5 retention guardrails and Step-0 NO_GO disposition on underpowered/right-censored inner weight loops."
+  },
+  "frontier_review_status": {
+    "status": "NATIVE_PER_MESSAGE_CONSENT_UNAVAILABLE",
+    "details": "Signed-in M365 Copilot desktop UI exposed GPT 6 Astra, Max and Opus 5.5 in the model menu (no Fable 5.2 in that menu; maximum-context setting not verified). Specific native per-message user approval required by the computer-use action policy was requested by the parent coordinator for a 552-word Astra Max review prompt and received no approval because the user was unavailable. Zero study review messages were sent and zero frontier review responses exist or are claimed."
+  },
+  "resource_accounting_reference": {
+    "file": "results/resource_accounting_v2.json",
+    "sha256": "e548afdc4c396a8746a4da0b24e632a196c5da4f8122e960f06c7f403e88f0b8",
+    "plane1_50_summaries_loop_plus_request_gpu_hours": 24.487190177611772,
+    "plane2_9_summaries_loop_gpu_hours": 6.172168007667383,
+    "disjoint_top_level_completed_stage_gpu_hours": 44.37389262457631,
+    "disjoint_top_level_failed_or_interrupted_stage_gpu_hours": 4.380056723598779,
+    "disjoint_top_level_total_stage_gpu_hours": 48.753949348175084,
+    "nested_vllm_server_lifetime_gpu_hours_non_additive": 17.19478026121984,
+    "parent_fiftynine_summary_cost_receipt_sha256": "dcef4a96b6c354c615d958d5c7af8dcbcb271a3c9fde97b375c335291c2c91ff",
+    "all_59_summaries_combined_loop_plus_request_gpu_hours": 30.659358185279157,
+    "all_59_summaries_combined_board_joules": 27119791.053886063,
+    "observed_stage_span_24gpu_equivalent_hours_not_billing": 248.63903562666667,
+    "parent_full_stage_accounting_receipt_sha256": "92f91c2b27a6a69464f1a528e05fade9c8439345c7691ade9ef6e221e54d7e94"
+  }
+}

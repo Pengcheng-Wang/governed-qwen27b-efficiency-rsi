@@ -1,0 +1,82 @@
+{
+  "status": "TRAIN_AA_CALIBRATED",
+  "paired_blocks": 5,
+  "total_runs": 10,
+  "mean_loop_seconds": 172.78484601646196,
+  "se_aa_loop_seconds": 3.4609127297446545,
+  "per_block_sd_loop_seconds": 7.738836127903406,
+  "mean_supervised_tokens_per_second": 1475.614904906821,
+  "se_aa_supervised_tokens_per_second": 27.183202242312984,
+  "runs": [
+    {
+      "block": 0,
+      "arm": "A1",
+      "loop_seconds": 189.09392924513668,
+      "after_nll": 0.6293646371636199,
+      "board_joules": 319177.60395092895
+    },
+    {
+      "block": 0,
+      "arm": "A2",
+      "loop_seconds": 171.04377212491818,
+      "after_nll": 0.6294348216976016,
+      "board_joules": 303914.86227699224
+    },
+    {
+      "block": 1,
+      "arm": "A1",
+      "loop_seconds": 171.20278041507117,
+      "after_nll": 0.6297436175401153,
+      "board_joules": 298551.3806999046
+    },
+    {
+      "block": 1,
+      "arm": "A2",
+      "loop_seconds": 169.82390062999912,
+      "after_nll": 0.6299981775328078,
+      "board_joules": 294756.3709945391
+    },
+    {
+      "block": 2,
+      "arm": "A1",
+      "loop_seconds": 170.8909435342066,
+      "after_nll": 0.6300030904943177,
+      "board_joules": 291727.47865194705
+    },
+    {
+      "block": 2,
+      "arm": "A2",
+      "loop_seconds": 171.09470276604407,
+      "after_nll": 0.6294549354463064,
+      "board_joules": 297920.70676916087
+    },
+    {
+      "block": 3,
+      "arm": "A1",
+      "loop_seconds": 173.37984340498224,
+      "after_nll": 0.6297745065111363,
+      "board_joules": 300853.3421745183
+    },
+    {
+      "block": 3,
+      "arm": "A2",
+      "loop_seconds": 170.39565654308535,
+      "after_nll": 0.6295515343288784,
+      "board_joules": 295347.36308528204
+    },
+    {
+      "block": 4,
+      "arm": "A1",
+      "loop_seconds": 170.375337327132,
+      "after_nll": 0.63004367796805,
+      "board_joules": 298588.3182111539
+    },
+    {
+      "block": 4,
+      "arm": "A2",
+      "loop_seconds": 170.5475941740442,
+      "after_nll": 0.6293304827107845,
+      "board_joules": 297899.26826785173
+    }
+  ]
+}

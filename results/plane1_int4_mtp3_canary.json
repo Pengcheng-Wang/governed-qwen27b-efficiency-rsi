@@ -1,0 +1,12 @@
+{
+  "attempted": true,
+  "status": "INT4_MTP3_NATIVE_LOADER_RESOLVED",
+  "lenient_accuracy": 0.90625,
+  "stop_rate": 1.0,
+  "output_tokens_per_second": 310.1759647638346,
+  "mtp_speculative": {
+    "draft_tokens": 63552.0,
+    "accepted_tokens": 39871.0,
+    "acceptance_rate": 0.6273760070493454
+  }
+}

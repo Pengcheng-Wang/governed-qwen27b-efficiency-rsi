@@ -1,0 +1,4 @@
+llmcompressor==0.13.0
+compressed-tensors==0.18.0
+auto-round==0.14.1
+accelerate==1.14.0

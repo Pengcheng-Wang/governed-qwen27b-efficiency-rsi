@@ -1,0 +1,19 @@
+{
+  "status": "MOE_CAP_98K_DEGENERATE_TAIL_NO_GO",
+  "cap_98304": {
+    "lenient_accuracy": 0.953125,
+    "strict_accuracy": 0.953125,
+    "stop_rate": 0.9765625,
+    "truncation_rate": 0.0234375,
+    "output_tokens_quantiles": {
+      "count": 128,
+      "p50": 8996.5,
+      "p90": 25952.3,
+      "p95": 35738.44999999999,
+      "p99": 98304.0,
+      "max": 98304.0
+    }
+  },
+  "required_cap_for_1p5x_p99": 147456.0,
+  "uncensored_1p5x_p99_satisfied": false
+}

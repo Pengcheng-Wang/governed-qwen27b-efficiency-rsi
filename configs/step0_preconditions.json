@@ -1,0 +1,205 @@
+{
+  "archetype": "hybrid",
+  "verifier_type": "deterministic",
+  "has_disjoint_dev_and_holdout": true,
+  "multi_shape_e2e_workload": true,
+  "evaluator_locked_and_isolated": true,
+  "hermetic_reset_available": true,
+  "offline_online_sign_conflict": false,
+  "has_trust_region_guard": true,
+  "has_fast_proxy_stage": true,
+  "one_shot_bug_ruled_out": true,
+  "require_80pct_full_gate_power": true,
+  "single_trial_minutes": 50.0,
+  "total_budget_minutes": 420.0,
+  "learnable_fraction": 0.3020833333333333,
+  "admitted_plane2_confirm_loops": [
+    "loop_train_systems_confirm_v2"
+  ],
+  "disposed_step0_nogo_loops": [
+    "loop_dense_serving_confirm_v2",
+    "loop_dense_restem_dapo_v2",
+    "loop_moe_qwen35_35b_a3b_v2"
+  ],
+  "paired_noise_se": 1.1703711188285073,
+  "aa_noise_se": 1.1703711188285073,
+  "min_worthwhile_effect": 25.0,
+  "delta_plan": 55.0,
+  "confirm_alpha": 0.025,
+  "planned_confirmations": 1,
+  "ni_predicate_power": 1.0,
+  "ni_predicate_inapplicability_substantiation": "Explicit 1.0 substantiated because the sole admitted Confirm loop (loop_train_systems_confirm_v2) has require_paired_quality_ni=False (fixed-token supervised SFT loop with no separate binary generation NI panel); optimization fidelity is gated deterministically via held-out NLL ratio max_ratio_vs_baseline.after_nll <= 1.005 modeled explicitly inside guardrail_predicate_power.",
+  "guardrail_predicate_power": 0.9996499999999999,
+  "power_conditioning_note": "All figures in full_gate_power and loop_level_admission_and_power_registry are plug-in Monte Carlo, binomial, and Fréchet planning estimates evaluated under explicit assumptions — NOT guaranteed finite-sample probability bounds. Training Confirm design power is conditioned on healthy/error-free 8-GPU DDP launches (p_launch_err=0) and post-B4 HermeticTrialSandbox calibration (plane1_train_aa_hermetic_v2.json, se_AA=1.1704s); zero pilot errors do NOT guarantee zero future infrastructure errors, and explicit 20-launch DDP error sensitivities are registered below. Open-generation serving Confirm (loop_dense_serving_confirm_v2) is formally disposed as Step-0 NO_GO after post-B4 hermetic serving A/A calibration (plane1_serving_aa_hermetic_v2.json, se_AA=113.5915 GPU-s) demonstrated primary Normal planning power 0.6376329614 < 0.80 under preserved gates.",
+  "hermetic_vs_legacy_aa_calibration_comparison": {
+    "train_hermetic_mean_loop_seconds": 308.11753996443,
+    "train_hermetic_se_aa_loop_seconds": 1.1703711188285073,
+    "train_legacy_warm_cache_mean_loop_seconds": 172.78484601646196,
+    "train_legacy_asymmetric_cold_block0_se_aa_loop_seconds": 3.4609127297446545,
+    "serving_hermetic_mean_dataset_seconds": 250.56752295615152,
+    "serving_hermetic_se_aa_assigned_gpu_seconds": 113.59153189115702,
+    "serving_legacy_mean_dataset_seconds": 279.45334440341685,
+    "serving_legacy_se_aa_assigned_gpu_seconds": 11.601083565610974
+  },
+  "loop_level_admission_and_power_registry": {
+    "loop_train_systems_confirm_v2": {
+      "verdict": "GO",
+      "design": "3-block 3x3 Latin Square independent-vs-T0 Search screen (T1, T2) -> live strict_guard gate-decision (zero fallback if neither qualifies) -> hard pre-GPU verify_train_confirm_authorization -> 10-block AB/BA Confirm of fastest PROVISIONAL_KEEP finalist on 8x A100 DDP (node-1) inside per-run HermeticTrialSandbox",
+      "pure_loop_timer_excludes_checkpoint_io": true,
+      "hermetic_fresh_cache_calibrated_in_aa": true,
+      "cold_step1_timing_profile_note": "Under fresh per-run caches, update 1 averages 123.53s vs 11.06s for run-median updates 2-16 (timings measure total update wall time and do not by themselves isolate compiler execution time).",
+      "peak_memory_headroom_below_76gib_ceiling": 20.860173225402832,
+      "fixed_deterministic_work_tokens": {
+        "input_tokens": 340797,
+        "supervised_tokens": 254724,
+        "updates": 16
+      },
+      "baseline_mean_loop_seconds": 308.11753996443,
+      "relative_after_nll_max_ratio": 1.005,
+      "min_improvement_seconds": 25.0,
+      "delta_plan_seconds": 55.0,
+      "se_aa_loop_seconds": 1.1703711188285073,
+      "mde_80pct_seconds": 3.278894426216282,
+      "plug_in_primary_speed_predicate_power_estimate": 1.0,
+      "calibrated_guardrail_predicate_details": {
+        "conditioning_scope": "Conditioned on healthy error-free 8-GPU DDP launches (p_launch_err=0).",
+        "calibrated_aa_after_nll_mean": 0.6294210065641197,
+        "calibrated_aa_after_nll_sd": 0.0007419758081971958,
+        "assumed_bf16_associativity_nll_shift": 0.001,
+        "mc_10block_max_after_nll_ratio_power": 0.99965,
+        "measured_micro1_peak_allocated_gib": 55.13982677459717,
+        "planned_micro4_peak_allocated_gib": 58.5,
+        "hard_ceiling_peak_allocated_gib": 76.0,
+        "deterministic_memory_guard_power": 1.0,
+        "conditional_healthy_guardrail_predicate_power": 0.9996499999999999,
+        "ddp_launch_error_sensitivity_20_runs": {
+          "p_launch_err_0": {
+            "assumed_per_ddp_launch_error_prob": 0.0,
+            "total_ddp_launches": 20,
+            "all_launches_error_free_prob": 1.0,
+            "guardrail_power_with_error_model": 0.9996499999999999
+          },
+          "p_launch_err_0.0001": {
+            "assumed_per_ddp_launch_error_prob": 0.0001,
+            "total_ddp_launches": 20,
+            "all_launches_error_free_prob": 0.9980018988604845,
+            "guardrail_power_with_error_model": 0.9976518988604846
+          },
+          "p_launch_err_0.001": {
+            "assumed_per_ddp_launch_error_prob": 0.001,
+            "total_ddp_launches": 20,
+            "all_launches_error_free_prob": 0.9801888648295347,
+            "guardrail_power_with_error_model": 0.9798388648295346
+          }
+        }
+      },
+      "plug_in_conditional_healthy_complete_predicate_frechet_estimate": 0.9996499999999999
+    },
+    "loop_dense_serving_confirm_v2": {
+      "verdict": "NO_GO",
+      "nogo_preflight_config": "configs/step0_serving_confirm_nogo.json",
+      "reasons": [
+        "S3_UNDERPOWERED_UNDER_OBSERVED_MATCHED_SEED_EMITTED_WORK_VARIANCE (post-B4 hermetic A/A se_AA=113.591532 GPU-s, wall SE=56.795766s; primary Normal planning power=0.6376329614 < 0.80 at preserved min_improvement=310.0 GPU-s, delta_plan=350.0 GPU-s, K=1, alpha=0.025)"
+      ],
+      "emitted_work_variance_observation": "Across 160 matched (ID, prompt_hash, request_seed) pairs in plane1_serving_aa_hermetic_v2.json (0 errors, 100% stop_rate, tpot_p95_ms=22.60 +/- 0.046ms invariant to 0.2%), 127/160 pairs exhibited observed generated-text divergence (e.g., Block 0 max tokens 12,249 -> 23,547 shifting 32-item dataset_seconds 294.12s -> 536.06s; vLLM 0.29.0 default non-reproducibility and continuous-batching numerical/scheduling effects are plausible context, not a uniquely proven cause). This emitted-work variance underpowers 32-item-block Confirm timing under unrelaxed gates without indicating S3 is ineffective.",
+      "single_finalist_retained_as_search_only_finding": "S3_int4_w4a16_tp1_mtp3_repaired",
+      "baseline_incumbent": "S0_bf16_tp2",
+      "confirm_and_holdout_panels_untouched": [
+        "data/splits/math_confirm1280.jsonl (0 touches)",
+        "data/splits/math_holdout512_prompts.jsonl (0 touches)"
+      ],
+      "search_only_factorial_diagnostics_not_in_confirm_k": [
+        "S1_bf16_tp2_mtp3 (rescored Search 96.09% vs S0 95.31%, discordance 5/128 -> plug-in single-look 2.0pp KL-NI power estimate 0.302181)",
+        "S2_int4_w4a16_tp1 (rescored Search 94.53%, isolating bundled INT4+TP1 without MTP3)"
+      ],
+      "baseline_mean_dataset_seconds": 250.56752295615152,
+      "baseline_mean_assigned_gpu_seconds": 501.13504591230304,
+      "min_improvement_gpu_seconds": 310.0,
+      "delta_plan_gpu_seconds": 350.0,
+      "analytic_normal_primary_speed_power": 0.6376329614046674,
+      "plug_in_mc_primary_speed_predicate_power_estimate": 0.6397,
+      "joint_guardrail_predicate_details": {
+        "model_nature": "Plug-in Monte Carlo, binomial, and Fréchet planning estimates under stated assumptions, NOT guaranteed finite-sample probability bounds.",
+        "conditioning_scope": "Design power conditioned on healthy/error-free owned local server infrastructure (p_req_err=0); zero pilot errors do not guarantee zero future errors.",
+        "cand_wall_seconds_at_delta_plan": 151.13504591230304,
+        "implied_wall_ratio_at_delta_plan": 0.603170930251608,
+        "mc_wall_ratio_guard_power_conservative_5blk_se": 0.9145,
+        "planning_assumption_per_item_stop_prob": 0.999,
+        "min_stops_required_per_32item_block": 31.0,
+        "all_12_timing_blocks_stop_floor_power": 0.9941813307361056,
+        "min_stops_required_quality1280": 1229.0,
+        "quality1280_candidate_stop_floor_power": 1.0,
+        "conditional_healthy_guardrail_predicate_power": 0.9086813307361057,
+        "sensitivity_at_832of832_cp95_stop_lb": {
+          "cp95_per_item_stop_lower_bound": 0.9955760652122835,
+          "all_12_timing_blocks_stop_floor_power": 0.8984018473611685,
+          "quality1280_candidate_stop_floor_power": 1.0,
+          "plug_in_conditional_guardrail_power_at_cp95_stop_lb": 0.8129018473611684
+        },
+        "infrastructure_error_sensitivity_4096_requests": {
+          "p_req_err_0": {
+            "assumed_iid_per_request_error_prob": 0.0,
+            "total_confirm_requests": 4096,
+            "all_requests_error_free_prob": 1.0,
+            "plug_in_guardrail_power_estimate_with_error_model": 0.9086813307361057
+          },
+          "p_req_err_1e-05": {
+            "assumed_iid_per_request_error_prob": 1e-05,
+            "total_confirm_requests": 4096,
+            "all_requests_error_free_prob": 0.95986732729889,
+            "plug_in_guardrail_power_estimate_with_error_model": 0.8685486580349957
+          },
+          "p_req_err_0.0001": {
+            "assumed_iid_per_request_error_prob": 0.0001,
+            "total_confirm_requests": 4096,
+            "all_requests_error_free_prob": 0.6639021655733869,
+            "plug_in_guardrail_power_estimate_with_error_model": 0.5725834963094925
+          }
+        }
+      },
+      "plug_in_kl_ni_power_at_s3_search_point_p0p0078125": 0.9127502593471382,
+      "plug_in_kl_ni_power_at_s3_cp95_lower_p0p000949": 0.9999999993789166,
+      "plug_in_kl_ni_power_at_s3_cp95_upper_p0p027651": 0.14143076594664394,
+      "plug_in_conditional_healthy_complete_predicate_frechet_estimate": 0.461131590083244
+    },
+    "loop_dense_restem_dapo_v2": {
+      "verdict": "NO_GO",
+      "reasons": [
+        "B1_DAPO_PUBLISHED_GOLD_CONTRADICTIONS_AND_UNIT_FALSE_NEGATIVES",
+        "STEP2_DAPO_ALL_ROLLOUT_P99_RIGHT_CENSORED_AT_32768 (36/768 = 4.6875% length truncations; p95=31930.1, p99=32768.0)",
+        "S3_DAPO_CONFIRM200_AND_RETENTION150_INTERSECTION_UNDERPOWERED_FOR_1_TO_2PP"
+      ]
+    },
+    "loop_moe_qwen35_35b_a3b_v2": {
+      "verdict": "NO_GO",
+      "reasons": [
+        "MOE_CAP_98K_DEGENERATE_TAIL_NO_GO (under study presence_penalty=0.0: 3/128 = 2.34% non-terminating at 98304 tokens, p99=98304 fails 1.5x uncensored p99; official model card recommends presence_penalty=1.5 to curb endless repetition with language-mixing caveat, documented in sources/research_model_sampling_policy_review.json)"
+      ]
+    }
+  },
+  "linux_verifier_runtime_qualification": {
+    "receipt": "results/plane1_linux_verifier_qualification_v2.json",
+    "runtime": {
+      "platform": "Linux-6.8.0-1067-azure-x86_64-with-glibc2.39",
+      "system": "Linux",
+      "python": "3.12.3",
+      "math_verify": "0.9.0",
+      "sympy": "1.14.0",
+      "antlr4_python3_runtime": "4.9.3",
+      "production_default_timeouts_unmodified": true
+    },
+    "unittest_stderr_tail": [
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 20 tests in 8.540s",
+      "",
+      "OK"
+    ],
+    "historical_40case_post_repair_acceptances": 30,
+    "verifier_execution_errors": 0
+  },
+  "frontier_model_review_status": {
+    "signed_in_m365_copilot_desktop": "REVIEW_SEND_CONFIRMATION_PENDING",
+    "evidence": "Fresh native computer-use inventory exposes the signed-in M365 Copilot app with GPT 6 Astra, Max and Opus 5.5 observed in the model menu (no Fable 5.2 in that menu; maximum-context setting not verified). Native action policy requires specific user confirmation before sending each message; parent coordinator owns any permission-limited reviews, zero review messages have been sent, and zero study review answers are claimed. Earlier locked-desktop cua.listWindows()==[] probes are retained as historical timeline."
+  }
+}

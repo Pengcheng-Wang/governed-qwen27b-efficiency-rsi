@@ -1,0 +1,46 @@
+{
+  "status": "VERIFIER_AUDIT_DENSE_RESCORED_V2",
+  "preserves_original_artifact": "results/plane1_verifier_audit_dense.json",
+  "original_artifact_sha256": "ab0c0a4d97db0fd44453f241d6c3106251493eb245723d37f4103fc5befb6ad6",
+  "raw_generations_sha256": "e462d8f92b7a4a33ace35bdc8a887a4ab2fa404ff2b0b120dbc6d8dd4fbedfa0",
+  "verifier_sha256": "a3aa8c7127f830c0d57257075c29422f942e3453e0608ea72225f64a89880ce0",
+  "isolated_scorer_sha256": "f2048ed0a3541f9e9fbbef36cd408629450ce30ae8eeab3abec2a79e847f868c",
+  "runtime": {
+    "platform": "Linux-6.8.0-1067-azure-x86_64-with-glibc2.39",
+    "system": "Linux",
+    "python": "3.12.3",
+    "math_verify": "0.9.0",
+    "sympy": "1.14.0",
+    "antlr4_python3_runtime": "4.9.3",
+    "production_default_timeouts_unmodified": true
+  },
+  "total_audited": 128,
+  "pre_repair_lenient_accuracy": 0.9453125,
+  "rescored_lenient_accuracy": 0.953125,
+  "rescored_strict_accuracy": 0.953125,
+  "rescored_v1_parity_accuracy": 0.9453125,
+  "rescored_pass_count": 122,
+  "rescored_fail_count": 6,
+  "changed_item_ids_vs_pre_repair": [
+    "math_train:2904"
+  ],
+  "truncation_rate": 0.0,
+  "natural_stop_lenient_parse_failure_rate": 0.0,
+  "natural_stop_strict_parse_failure_rate": 0.0,
+  "combined_unusable_rate": 0.0,
+  "verifier_error_count": 0.0,
+  "pre_repair_slo_correct_goodput_per_second": 0.15152072246898182,
+  "slo_qualified_request_count": 116,
+  "slo_correct_request_count": 110,
+  "slo_correct_goodput_per_second": 0.15291082084025687,
+  "strict_slo_correct_request_count": 110,
+  "strict_slo_correct_goodput_per_second": 0.15291082084025687,
+  "output_tokens_quantiles": {
+    "count": 128,
+    "p50": 738.5,
+    "p90": 3648.7999999999993,
+    "p95": 5699.9499999999925,
+    "p99": 15930.140000000014,
+    "max": 26667.0
+  }
+}

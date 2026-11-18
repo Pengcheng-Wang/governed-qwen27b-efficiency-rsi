@@ -1,0 +1,9 @@
+{
+  "search_blocks_file": "results/scored/p2_train_search3_blocks.json",
+  "search_mean_loop_seconds": {
+    "T0": 309.3330550416528,
+    "T1": 316.5847059672233,
+    "T2": 299.90744014123146
+  },
+  "status": "WORKER_TRAIN_SEARCH_COMPLETE"
+}

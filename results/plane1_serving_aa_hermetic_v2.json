@@ -1,0 +1,168 @@
+{
+  "blocks": [
+    {
+      "arms": {
+        "A1": {
+          "assigned_gpu_seconds": 588.2372459922917,
+          "board_joules": 194868.2156113311,
+          "dataset_seconds": 294.11862299614586,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.9375,
+          "output_tokens_per_second": 183.88838982395458,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.662759608796364
+        },
+        "A2": {
+          "assigned_gpu_seconds": 1072.1249897941016,
+          "board_joules": 359390.59971634374,
+          "dataset_seconds": 536.0624948970508,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.90625,
+          "output_tokens_per_second": 139.1815333291105,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.69883672383879
+        }
+      },
+      "block_index": 0,
+      "order": [
+        "A1",
+        "A2"
+      ],
+      "seed": 20261117
+    },
+    {
+      "arms": {
+        "A1": {
+          "assigned_gpu_seconds": 495.6598510323092,
+          "board_joules": 166388.3961281665,
+          "dataset_seconds": 247.82992551615462,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.9375,
+          "output_tokens_per_second": 193.51980960375894,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.527849297288913
+        },
+        "A2": {
+          "assigned_gpu_seconds": 564.6156692020595,
+          "board_joules": 191386.6355801964,
+          "dataset_seconds": 282.30783460102975,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.9375,
+          "output_tokens_per_second": 231.2652785292621,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.68525787110717
+        }
+      },
+      "block_index": 1,
+      "order": [
+        "A2",
+        "A1"
+      ],
+      "seed": 20261118
+    },
+    {
+      "arms": {
+        "A1": {
+          "assigned_gpu_seconds": 396.73837121995166,
+          "board_joules": 133503.6006383473,
+          "dataset_seconds": 198.36918560997583,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.9375,
+          "output_tokens_per_second": 227.50509289649696,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.594050280250194
+        },
+        "A2": {
+          "assigned_gpu_seconds": 333.248275292106,
+          "board_joules": 112906.57016248805,
+          "dataset_seconds": 166.624137646053,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.9375,
+          "output_tokens_per_second": 274.97816731287577,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.478839553962054
+        }
+      },
+      "block_index": 2,
+      "order": [
+        "A1",
+        "A2"
+      ],
+      "seed": 20261119
+    },
+    {
+      "arms": {
+        "A1": {
+          "assigned_gpu_seconds": 518.2616956778802,
+          "board_joules": 174286.58890417518,
+          "dataset_seconds": 259.1308478389401,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.9375,
+          "output_tokens_per_second": 234.53402212373427,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.563628519130663
+        },
+        "A2": {
+          "assigned_gpu_seconds": 325.695348162204,
+          "board_joules": 110228.90692729712,
+          "dataset_seconds": 162.847674081102,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.90625,
+          "output_tokens_per_second": 292.5617468522925,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.58894468762698
+        }
+      },
+      "block_index": 3,
+      "order": [
+        "A2",
+        "A1"
+      ],
+      "seed": 20261120
+    },
+    {
+      "arms": {
+        "A1": {
+          "assigned_gpu_seconds": 316.7334099081345,
+          "board_joules": 106445.69928573658,
+          "dataset_seconds": 158.36670495406725,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.9375,
+          "output_tokens_per_second": 281.5238216450305,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.5489468196137
+        },
+        "A2": {
+          "assigned_gpu_seconds": 400.03560284199193,
+          "board_joules": 135225.40373111208,
+          "dataset_seconds": 200.01780142099597,
+          "infrastructure_errors": 0,
+          "lenient_accuracy": 0.9375,
+          "output_tokens_per_second": 252.70750723637423,
+          "stop_rate": 1.0,
+          "tpot_p95_ms": 22.64819828364324
+        }
+      },
+      "block_index": 4,
+      "order": [
+        "A1",
+        "A2"
+      ],
+      "seed": 20261121
+    }
+  ],
+  "cache_and_worktree_policy": "Exact HermeticTrialSandbox suite detached git worktree + per-server isolated VLLM_CACHE_ROOT/TRITON_CACHE_DIR/TORCHINDUCTOR_CACHE_DIR + per-block detached client worktree/caches",
+  "mean_assigned_gpu_seconds": 501.13504591230304,
+  "mean_dataset_seconds": 250.56752295615152,
+  "mean_output_tokens_per_second": 231.16653693528906,
+  "mean_tpot_p95_ms": 22.599731164525807,
+  "paired_blocks": 5,
+  "per_block_sd_dataset_seconds": 126.99919348848117,
+  "preserves_prior_calibration": "results/plane1_serving_aa_noise.json",
+  "se_aa_assigned_gpu_seconds": 113.59153189115702,
+  "se_aa_dataset_seconds": 56.79576594557851,
+  "se_aa_output_tokens_per_second": 21.097927616428944,
+  "se_aa_tpot_p95_ms": 0.04561538480338218,
+  "status": "SERVING_AA_HERMETIC_WORKTREE_CACHE_CALIBRATED",
+  "total_runs": 10
+}

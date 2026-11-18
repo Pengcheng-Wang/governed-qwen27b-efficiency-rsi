@@ -1,0 +1,667 @@
+{
+  "candidate_id": "S1_bf16_tp2_mtp3",
+  "env_fingerprint": "plane1_search128_deterministic_rescore_linux_mv090_sympy114",
+  "generations_sha256": "03c9110514372cbb4bc5a853654bcfccc2a7c78e037c89fbb625a207dadce684",
+  "items": [
+    {
+      "cluster_id": "math_train:1116",
+      "id": "math_train:1116",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1154",
+      "id": "math_train:1154",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1183",
+      "id": "math_train:1183",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1206",
+      "id": "math_train:1206",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1236",
+      "id": "math_train:1236",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1240",
+      "id": "math_train:1240",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:127",
+      "id": "math_train:127",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1271",
+      "id": "math_train:1271",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1309",
+      "id": "math_train:1309",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1339",
+      "id": "math_train:1339",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1341",
+      "id": "math_train:1341",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1343",
+      "id": "math_train:1343",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:135",
+      "id": "math_train:135",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1350",
+      "id": "math_train:1350",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1368",
+      "id": "math_train:1368",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1551",
+      "id": "math_train:1551",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:1674",
+      "id": "math_train:1674",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2001",
+      "id": "math_train:2001",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2078",
+      "id": "math_train:2078",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2082",
+      "id": "math_train:2082",
+      "value": 0.0
+    },
+    {
+      "cluster_id": "math_train:2110",
+      "id": "math_train:2110",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:217",
+      "id": "math_train:217",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2171",
+      "id": "math_train:2171",
+      "value": 0.0
+    },
+    {
+      "cluster_id": "math_train:2183",
+      "id": "math_train:2183",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2191",
+      "id": "math_train:2191",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2247",
+      "id": "math_train:2247",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2288",
+      "id": "math_train:2288",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2431",
+      "id": "math_train:2431",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2483",
+      "id": "math_train:2483",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:261",
+      "id": "math_train:261",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2694",
+      "id": "math_train:2694",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2702",
+      "id": "math_train:2702",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2807",
+      "id": "math_train:2807",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2837",
+      "id": "math_train:2837",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:286",
+      "id": "math_train:286",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2904",
+      "id": "math_train:2904",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2937",
+      "id": "math_train:2937",
+      "value": 0.0
+    },
+    {
+      "cluster_id": "math_train:2939",
+      "id": "math_train:2939",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2987",
+      "id": "math_train:2987",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:2988",
+      "id": "math_train:2988",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3167",
+      "id": "math_train:3167",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3187",
+      "id": "math_train:3187",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:321",
+      "id": "math_train:321",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3241",
+      "id": "math_train:3241",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3358",
+      "id": "math_train:3358",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:338",
+      "id": "math_train:338",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3503",
+      "id": "math_train:3503",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3516",
+      "id": "math_train:3516",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3524",
+      "id": "math_train:3524",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:353",
+      "id": "math_train:353",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3559",
+      "id": "math_train:3559",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3590",
+      "id": "math_train:3590",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3603",
+      "id": "math_train:3603",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3767",
+      "id": "math_train:3767",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3812",
+      "id": "math_train:3812",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3878",
+      "id": "math_train:3878",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3901",
+      "id": "math_train:3901",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3966",
+      "id": "math_train:3966",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:3974",
+      "id": "math_train:3974",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4",
+      "id": "math_train:4",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4006",
+      "id": "math_train:4006",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4090",
+      "id": "math_train:4090",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4105",
+      "id": "math_train:4105",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4115",
+      "id": "math_train:4115",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:414",
+      "id": "math_train:414",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4414",
+      "id": "math_train:4414",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4474",
+      "id": "math_train:4474",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4571",
+      "id": "math_train:4571",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4579",
+      "id": "math_train:4579",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4583",
+      "id": "math_train:4583",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4842",
+      "id": "math_train:4842",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4955",
+      "id": "math_train:4955",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4959",
+      "id": "math_train:4959",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4964",
+      "id": "math_train:4964",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:4975",
+      "id": "math_train:4975",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5031",
+      "id": "math_train:5031",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5034",
+      "id": "math_train:5034",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5063",
+      "id": "math_train:5063",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5176",
+      "id": "math_train:5176",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:522",
+      "id": "math_train:522",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5254",
+      "id": "math_train:5254",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5273",
+      "id": "math_train:5273",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5294",
+      "id": "math_train:5294",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5337",
+      "id": "math_train:5337",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5344",
+      "id": "math_train:5344",
+      "value": 0.0
+    },
+    {
+      "cluster_id": "math_train:5348",
+      "id": "math_train:5348",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5385",
+      "id": "math_train:5385",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5402",
+      "id": "math_train:5402",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:545",
+      "id": "math_train:545",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5469",
+      "id": "math_train:5469",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5484",
+      "id": "math_train:5484",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5486",
+      "id": "math_train:5486",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5528",
+      "id": "math_train:5528",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5538",
+      "id": "math_train:5538",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5597",
+      "id": "math_train:5597",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5627",
+      "id": "math_train:5627",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5652",
+      "id": "math_train:5652",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5676",
+      "id": "math_train:5676",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5732",
+      "id": "math_train:5732",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5802",
+      "id": "math_train:5802",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5829",
+      "id": "math_train:5829",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5856",
+      "id": "math_train:5856",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:5937",
+      "id": "math_train:5937",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:609",
+      "id": "math_train:609",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6113",
+      "id": "math_train:6113",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6125",
+      "id": "math_train:6125",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:614",
+      "id": "math_train:614",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6146",
+      "id": "math_train:6146",
+      "value": 0.0
+    },
+    {
+      "cluster_id": "math_train:6274",
+      "id": "math_train:6274",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6376",
+      "id": "math_train:6376",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6667",
+      "id": "math_train:6667",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:669",
+      "id": "math_train:669",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6706",
+      "id": "math_train:6706",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6711",
+      "id": "math_train:6711",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6717",
+      "id": "math_train:6717",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6762",
+      "id": "math_train:6762",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:677",
+      "id": "math_train:677",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6814",
+      "id": "math_train:6814",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:6867",
+      "id": "math_train:6867",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:72",
+      "id": "math_train:72",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:7412",
+      "id": "math_train:7412",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:810",
+      "id": "math_train:810",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:845",
+      "id": "math_train:845",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:862",
+      "id": "math_train:862",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:864",
+      "id": "math_train:864",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:890",
+      "id": "math_train:890",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:960",
+      "id": "math_train:960",
+      "value": 1.0
+    },
+    {
+      "cluster_id": "math_train:995",
+      "id": "math_train:995",
+      "value": 1.0
+    }
+  ],
+  "metrics": {
+    "combined_unusable_rate": 0.0,
+    "infrastructure_error_count": 0.0,
+    "lenient_accuracy": 0.9609375,
+    "mean_output_tokens": 1941.9296875,
+    "median_output_tokens": 747.5,
+    "natural_stop_lenient_parse_failure_rate": 0.0,
+    "natural_stop_strict_parse_failure_rate": 0.0,
+    "pass_at_k_lenient": 0.9609375,
+    "pass_at_k_strict": 0.9609375,
+    "stop_rate": 1.0,
+    "strict_accuracy": 0.9609375,
+    "total_generations": 128.0,
+    "truncation_rate": 0.0,
+    "unique_problems": 128.0,
+    "v1_parity_accuracy": 0.953125,
+    "verifier_error_count": 0.0
+  },
+  "protocol_id": "plane1_search128_rescored_v2",
+  "scorer_sha256": "f2048ed0a3541f9e9fbbef36cd408629450ce30ae8eeab3abec2a79e847f868c"
+}
